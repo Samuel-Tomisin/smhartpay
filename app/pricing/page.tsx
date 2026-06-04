@@ -9,7 +9,7 @@ export default function Pricing () {
         <div>
             <Navbar/>
             <div>
-
+                <h1 className="p-10">Pricing</h1>
             </div>
             <Footer/>
         </div>

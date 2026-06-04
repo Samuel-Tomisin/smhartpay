@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 // ─── App Store URLs ───────────────────────────────────────────────
 // Replace the placeholder strings with your real store links
@@ -29,7 +30,7 @@ export default function Button({ text, onClick }: ButtonProps) {
 
 export function AppStoreButton() {
   return (
-    <link
+    <Link
       href="https://apps.apple.com/your-app-link"
       target="_blank"
       rel="noopener noreferrer"
@@ -49,7 +50,7 @@ export function AppStoreButton() {
         <span className="text-[10px] text-gray-300 font-normal">Download on the</span>
         <span className="text-[15px] font-semibold tracking-tight">App Store</span>
       </div>
-    </link>
+    </Link>
   );
 }
 
@@ -57,7 +58,7 @@ export function AppStoreButton() {
 
 export function PlayStoreButton() {
   return (
-    <link
+    <Link
       href="https://play.google.com/store/your-app-link"
       target="_blank"
       rel="noopener noreferrer"
@@ -80,6 +81,6 @@ export function PlayStoreButton() {
         <span className="text-[10px] text-gray-300 font-normal">Get it on</span>
         <span className="text-[15px] font-semibold tracking-tight">Google Play</span>
       </div>
-    </link>
+    </Link>
   );
 }
