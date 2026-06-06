@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import Button from "../ui/button";
 
 const featuresItems = [
@@ -132,7 +132,6 @@ function HamburgerIcon({ open }: { open: boolean }) {
     >
       <path
         d="M3 6 L21 6"
-        className="transition-all duration-300 origin-center"
         stroke="currentColor"
         strokeWidth={2}
         strokeLinecap="round"
@@ -140,6 +139,7 @@ function HamburgerIcon({ open }: { open: boolean }) {
         style={{
           transform: open ? "translateY(6px) rotate(45deg)" : "none",
           transformOrigin: "center",
+          transition: "transform 0.3s",
         }}
       />
       <path
@@ -152,7 +152,6 @@ function HamburgerIcon({ open }: { open: boolean }) {
       />
       <path
         d="M3 18 L21 18"
-        className="transition-all duration-300"
         stroke="currentColor"
         strokeWidth={2}
         strokeLinecap="round"
@@ -160,6 +159,7 @@ function HamburgerIcon({ open }: { open: boolean }) {
         style={{
           transform: open ? "translateY(-6px) rotate(-45deg)" : "none",
           transformOrigin: "center",
+          transition: "transform 0.3s",
         }}
       />
     </svg>
@@ -170,127 +170,111 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="relative bg-white sticky top-0 z-50 border-b border-gray-100 shadow-sm shadow-blue-50">
+    <nav className="bg-white sticky top-0 z-50 border-b border-gray-100 shadow-sm shadow-blue-50">
 
       {/* ── Top bar ── */}
-      <div className="flex justify-between items-center px-4 sm:px-8 lg:px-14 xl:px-20 py-3">
+      <div className="w-full px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto flex justify-between items-center py-3">
 
-        {/* Logo */}
-  <Link href="/">
-  <img
-    src="/images/logo.png"
-    alt="SmhartPay Logo"
-    className="w-12 h-12 sm:w-14 sm:h-14 cursor-pointer object-contain"
-  />
-</Link>
-        <div className="flex items-center">
-          {/* Desktop links — hidden below lg */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-7 font-semibold text-[14px]">
-            <Link href="/" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-600 transition-colors">Home</Link>
-            <Dropdown label="Features" items={featuresItems} />
-            <Link href="/pricing" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-600 transition-colors">Pricing</Link>
-            <Link href="/blog" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-600 transition-colors">Blog</Link>
-            <Link href="/help-centre" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-600 transition-colors">Help-Centre</Link>
-            <Dropdown label="Company" items={companyItems} />
-            <Link href="/sign-in" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-200 transition-colors">Sign In</Link>
+          {/* Logo */}
+          <Link href="/">
+            <img
+              src="/images/logo.png"
+              alt="SmhartPay Logo"
+              className="w-12 h-12 sm:w-14 sm:h-14 cursor-pointer object-contain"
+            />
+          </Link>
+
+          <div className="flex items-center">
+            {/* Desktop links — hidden below lg */}
+            <div className="hidden lg:flex items-center gap-6 xl:gap-7 font-semibold text-[14px]">
+              <Link href="/" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-600 transition-colors">Home</Link>
+              <Dropdown label="Features" items={featuresItems} />
+              <Link href="/pricing" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-600 transition-colors">Pricing</Link>
+              <Link href="/blog" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-600 transition-colors">Blog</Link>
+              <Link href="/help-centre" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-600 transition-colors">Help-Centre</Link>
+              <Dropdown label="Company" items={companyItems} />
+              <Link href="/sign-in" className="cursor-pointer hover:text-blue-900 hover:font-bold text-blue-600 transition-colors">Sign In</Link>
+            </div>
+
+            {/* Desktop CTA */}
+            <div className="hidden lg:block ml-4 xl:ml-7">
+              <Button text="Download SmhartPay" />
+            </div>
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:block ml-4 xl:ml-7">
-            <Button text="Download SmhartPay" />
-          </div>
+          {/* Hamburger button — visible below lg */}
+          <button
+            onClick={() => setMobileOpen((prev) => !prev)}
+            className="lg:hidden p-2 rounded-lg text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+          >
+            <HamburgerIcon open={mobileOpen} />
+          </button>
+
         </div>
-
-        {/* Hamburger button — visible below lg */}
-        <button
-          onClick={() => setMobileOpen((prev) => !prev)}
-          className="lg:hidden p-2 rounded-lg text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors"
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          aria-expanded={mobileOpen}
-        >
-          <HamburgerIcon open={mobileOpen} />
-        </button>
       </div>
 
-{/* Mobile / Tablet Menu */}
-<div
-  className={`lg:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg z-50 overflow-hidden transition-all duration-300 ease-in-out ${
-    mobileOpen
-      ? "max-h-[700px] opacity-100"
-      : "max-h-0 opacity-0"
-  }`}
->
-  <div className="px-4 sm:px-8 py-2 flex flex-col">
+      {/* Mobile / Tablet Menu */}
+      <div
+        className={`lg:hidden w-full bg-white border-t border-gray-100 shadow-lg z-50 overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-2 flex flex-col">
 
-    <Link
-      href="/"
-      onClick={() => setMobileOpen(false)}
-      className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
-    >
-      Home
-    </Link>
+          <Link
+            href="/"
+            onClick={() => setMobileOpen(false)}
+            className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+          >
+            Home
+          </Link>
 
-    <Dropdown
-      label="Features"
-      items={featuresItems}
-      isMobile
-    />
+          <Dropdown label="Features" items={featuresItems} isMobile />
 
-    <Link
-      href="/pricing"
-      onClick={() => setMobileOpen(false)}
-      className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
-    >
-      Pricing
-    </Link>
+          <Link
+            href="/pricing"
+            onClick={() => setMobileOpen(false)}
+            className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+          >
+            Pricing
+          </Link>
 
-    <Link
-      href="/blog"
-      onClick={() => setMobileOpen(false)}
-      className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
-    >
-      Blog
-    </Link>
+          <Link
+            href="/blog"
+            onClick={() => setMobileOpen(false)}
+            className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+          >
+            Blog
+          </Link>
 
-    <Link
-      href="/help-centre"
-      onClick={() => setMobileOpen(false)}
-      className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
-    >
-      Help Centre
-    </Link>
+          <Link
+            href="/help-centre"
+            onClick={() => setMobileOpen(false)}
+            className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+          >
+            Help Centre
+          </Link>
 
-    <Dropdown
-      label="Company"
-      items={companyItems}
-      isMobile
-    />
+          <Dropdown label="Company" items={companyItems} isMobile />
 
-    <Link
-      href="/sign-in"
-      onClick={() => setMobileOpen(false)}
-      className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
-    >
-      Sign In
-    </Link>
+          <Link
+            href="/sign-in"
+            onClick={() => setMobileOpen(false)}
+            className="py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+          >
+            Sign In
+          </Link>
 
-    <div className="py-4">
-      <Button text="Download SmhartPay" />
-    </div>
+          <div className="py-4">
+            <Button text="Download SmhartPay" />
+          </div>
 
-  </div>
-</div>
+        </div>
+      </div>
 
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(-6px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.18s ease-out forwards;
-        }
-      `}
-      </style>
     </nav>
   );
 }

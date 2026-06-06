@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import { ArrowRight } from 'lucide-react';
 
 export default function Getstarted () {
@@ -11,9 +12,11 @@ export default function Getstarted () {
                 <br className="hidden lg:block" />
                 experiences every day.
             </p>
-            <button className="rounded-sm border-[1] text-white text-[14px] md:text-[15px] lg:text-[16px] font-semibold py-3 px-6 md:px-7 flex items-center gap-2 whitespace-nowrap shrink-0">
-                Get Started<ArrowRight className="animate-bounce"/>
-            </button>
+            <Link href="/get-started">
+                <button className="rounded-sm border-[1] border-white text-white text-[14px] md:text-[15px] lg:text-[16px] font-semibold py-3 px-6 md:px-7 flex items-center gap-2 whitespace-nowrap shrink-0">
+                    Get Started<ArrowRight className="animate-bounce"/>
+                </button>
+            </Link>
         </div>
     );
 }

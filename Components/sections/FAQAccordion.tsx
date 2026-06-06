@@ -120,7 +120,7 @@ function FAQItem({
       >
         <div className="pb-6">
 
-          {/* "Answer" label with blue line — matches the screenshot */}
+          {/* "Answer" label with blue line */}
           <div className="flex items-center gap-3 mb-3">
             <span className="w-8 h-[2px] bg-[#034EA2] rounded-full inline-block" />
             <span className="text-[13px] sm:text-[14px] font-semibold text-[#034EA2]">
@@ -156,7 +156,7 @@ export default function FAQs() {
       lg:px-20
       bg-white
     ">
-      <div className="max-w-8xl mx-auto">
+      <div className="max-w-6xl mx-auto">
 
         {/* ── Heading ── */}
         <h2 className="

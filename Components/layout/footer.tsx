@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <div className="px-5 sm:px-10 md:px-16 lg:px-20">
             {/* Top section: logo + nav columns */}
-            <div className="py-12 md:py-20 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:flex lg:justify-between">
+            <div className="max-w-6xl mx-auto py-12 md:py-20 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:flex lg:justify-between">
                 {/* Brand + app store — full width on mobile */}
                 <div className="col-span-2 sm:col-span-3 lg:col-span-1">
                     <img src="/images/logo.png" alt="" className="size-14 cursor-pointer"/>
@@ -47,7 +47,7 @@ export default function Footer() {
                 <div>
                     <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7]">Resources Links</h3>
                     <ul className="text-[14px] text-[#7C8FB7] space-y-1 flex flex-col">
-                        <Link href="/Help-Centre" className="cursor-pointer">Help-Centre</Link>
+                        <Link href="/help-centre" className="cursor-pointer">Help-Centre</Link>
                         <Link href="/faqs" className="cursor-pointer">FAQs</Link>
                         <Link href="/blog" className="cursor-pointer">Blog</Link>
                         <Link href="/security" className="cursor-pointer">Security</Link>
@@ -58,38 +58,31 @@ export default function Footer() {
                 <div>
                     <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7] flex">Legal Links</h3>
                     <ul className="text-[14px] text-[#7C8FB7] space-y-1 flex flex-col">
-                        <Link href="/Terms-of-Use" className="cursor-pointer">Terms of Use</Link>
-                        <Link href="/Privacy-Policy" className="cursor-pointer">Privacy Policy</Link>
-                        <Link href="/Cookie-Policy" className="cursor-pointer">Cookie Policy</Link>
+                        <Link href="/terms-of-Use" className="cursor-pointer">Terms of Use</Link>
+                        <Link href="/privacy-policy" className="cursor-pointer">Privacy Policy</Link>
+                        <Link href="/cookie-policy" className="cursor-pointer">Cookie Policy</Link>
                     </ul>
                 </div>
             </div>
 
             {/* Bottom section: socials + fund protection */}
-            <div className="flex flex-col gap-8 md:flex-row md:justify-between pb-12 md:pb-20">
+            <div className="max-w-6xl mx-auto flex flex-col gap-8 md:flex-row md:justify-between pb-12 md:pb-20">
                 <div>
                     <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7]">Social Links</h3>
                     <div className='flex grayscale gap-2.5'>
-                    <Link href="https://twitter.com"
-                    target="_blank">
-    <img src="/images/twitter.svg" alt="twitter logo" className="size-7 cursor-pointer" />
-</Link>
-
-<Link href="https://instagram.com"
-target="_blank">
-    <img src="/images/instagram.png" alt="instagram logo" className="size-7 cursor-pointer" />
-</Link>
-
-<Link href="https://facebook.com"
-target="_blank">
-    <img src="/images/facebook.svg" alt="facebook logo" className="size-7 cursor-pointer" />
-</Link>
-
-<Link href="https://linkedin.com"
-target="_blank">
-    <img src="/images/linkedin.png" alt="linkedin logo" className="size-7 cursor-pointer" />
-</Link>
-</div>
+                        <Link href="https://twitter.com" target="_blank">
+                            <img src="/images/twitter.svg" alt="twitter logo" className="size-7 cursor-pointer" />
+                        </Link>
+                        <Link href="https://instagram.com" target="_blank">
+                            <img src="/images/instagram.png" alt="instagram logo" className="size-7 cursor-pointer" />
+                        </Link>
+                        <Link href="https://facebook.com" target="_blank">
+                            <img src="/images/facebook.svg" alt="facebook logo" className="size-7 cursor-pointer" />
+                        </Link>
+                        <Link href="https://linkedin.com" target="_blank">
+                            <img src="/images/linkedin.png" alt="linkedin logo" className="size-7 cursor-pointer" />
+                        </Link>
+                    </div>
                 </div>
 
                 <div className="md:max-w-md">
@@ -103,7 +96,7 @@ target="_blank">
             </div>
 
             {/* Copyright bar */}
-            <div className="pb-12 md:pb-20">
+            <div className="max-w-6xl mx-auto pb-12 md:pb-20">
                 <div className="border-t border-gray-200 w-full mb-4"></div>
                 <h3 className="flex justify-center text-[13px] text-[#7C8FB7]">
                     © SmhartPay 2026, All Rights Reserved

@@ -16,17 +16,23 @@ export default function Home () {
     return (
         <div>
             <Navbar/>
+            <div className="bg-white">
             <Hero/>
             <Features/>
+            </div>
             <div className="bg-[#034EA2]">
             <Getstarted/>
             </div>
+            <div className="bg-white">
             <Mobile/>
             <Mobile2/>
+            </div>
             <div className="bg-[#034EA2]">
             <CTASection/>
             </div>
+            <div className="bg-white">
             <FAQs/>
+            </div>
             <div className="bg-[#FAFAF9]">
             <Footer/>
             </div>

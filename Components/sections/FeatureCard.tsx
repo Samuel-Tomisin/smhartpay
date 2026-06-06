@@ -14,7 +14,7 @@ export default function Features() {
   return (
     <main className="bg-[url('/services-background.svg')] pt-14 md:pt-20 pb-16 md:pb-30 min-h-screen px-6 md:px-10 lg:px-20">
       {/* MAIN GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
         {/* LEFT COLUMN */}
         <div className="space-y-5 md:space-y-6">
@@ -32,30 +32,29 @@ export default function Features() {
           {/* CARD 1 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 text-[#034EA2] rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Wallet />
+              <Wallet className="text-blue-800" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Wallet
               </h2>
             </div>
             <p className="text-[#64748B] text-[14px] md:text-[15px]">
-
-Manage your money effortlessly with a secure digital wallet.
-Store funds, make payments, track transactions, and access your finances anytime, branywhere—all from one convenient place.
-
+              Manage your money effortlessly with a secure digital wallet.
+              Store funds, make payments, track transactions, and access your finances anytime,
+              anywhere—all from one convenient place.
             </p>
           </div>
 
           {/* CARD 2 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Send  className="text-blue-800"/>
+              <Send className="text-blue-800" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Transfer
               </h2>
             </div>
             <p className="text-[#64748B] text-[14px] md:text-[15px]">
               Send money quickly and securely to banks, wallets, and other users.
-               Enjoy seamless transfers with real-time processing, low fees, and reliable transaction tracking.
+              Enjoy seamless transfers with real-time processing, low fees, and reliable transaction tracking.
             </p>
           </div>
 
@@ -67,7 +66,7 @@ Store funds, make payments, track transactions, and access your finances anytime
           {/* CARD 3 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <HandCoins className="text-blue-800"/>
+              <HandCoins className="text-blue-800" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Receive Funds
               </h2>
@@ -81,13 +80,13 @@ Store funds, make payments, track transactions, and access your finances anytime
           {/* CARD 4 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Smartphone className="text-blue-800"/>
+              <Smartphone className="text-blue-800" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 VTU
               </h2>
             </div>
             <p className="text-[#64748B] text-[14px] md:text-[15px]">
-              Purchase airtime and data bundles for all major networks anytime, anywhere. Enjoy fast, 
+              Purchase airtime and data bundles for all major networks anytime, anywhere. Enjoy fast,
               reliable top-ups with competitive rates and instant delivery.
             </p>
           </div>
@@ -95,13 +94,13 @@ Store funds, make payments, track transactions, and access your finances anytime
           {/* CARD 5 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Gift className="text-blue-800"/>
+              <Gift className="text-blue-800" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Gift Cards
               </h2>
             </div>
             <p className="text-[#64748B] text-[14px] md:text-[15px]">
-              Buy, sell, and redeem gift cards from leading global brands with ease. Enjoy secure transactions, 
+              Buy, sell, and redeem gift cards from leading global brands with ease. Enjoy secure transactions,
               competitive rates, and instant value for your digital assets.
             </p>
           </div>
@@ -114,13 +113,13 @@ Store funds, make payments, track transactions, and access your finances anytime
           {/* CARD 6 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Landmark className="text-blue-800"/>
+              <Landmark className="text-blue-800" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Savings
               </h2>
             </div>
             <p className="text-[#64748B] text-[14px] md:text-[15px]">
-              Grow your money with flexible savings plans designed to help you achieve your financial goals. 
+              Grow your money with flexible savings plans designed to help you achieve your financial goals.
               Save consistently, earn rewards, and access your funds when needed.
             </p>
           </div>
@@ -128,13 +127,13 @@ Store funds, make payments, track transactions, and access your finances anytime
           {/* CARD 7 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Gem className="text-blue-800"/>
+              <Gem className="text-blue-800" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Rewards
               </h2>
             </div>
             <p className="text-[#64748B] text-[14px] md:text-[15px]">
-              Earn points, cashback, and exclusive benefits every time you use the app. Get rewarded for your 
+              Earn points, cashback, and exclusive benefits every time you use the app. Get rewarded for your
               transactions and enjoy more value from your everyday financial activities.
             </p>
           </div>
@@ -142,13 +141,13 @@ Store funds, make payments, track transactions, and access your finances anytime
           {/* CARD 8 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <CreditCard className="text-blue-800"/>
+              <CreditCard className="text-blue-800" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Cards
               </h2>
             </div>
             <p className="text-[#64748B] text-[14px] md:text-[15px]">
-              Make secure payments online and in-store with virtual and physical cards. Enjoy convenient spending, 
+              Make secure payments online and in-store with virtual and physical cards. Enjoy convenient spending,
               enhanced security, and complete control over your card transactions.
             </p>
           </div>
