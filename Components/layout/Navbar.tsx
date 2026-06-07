@@ -6,6 +6,7 @@ import Button from "../ui/button";
 
 const featuresItems = [
   { label: "Cards",         href: "/features/cards" },
+  { label: "Gift Cards",    href: "/features/gift-cards" },
   { label: "Receive Funds", href: "/features/receive-funds" },
   { label: "Rewards",       href: "/features/rewards" },
   { label: "Savings",       href: "/features/savings" },

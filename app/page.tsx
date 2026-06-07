@@ -9,6 +9,7 @@ import Mobile from "@/Components/sections/MobileMenu";
 import Mobile2 from "@/Components/sections/MobileMenu2";
 import Getstarted from "@/Components/sections/StatsSection";
 import FAQs from "./faqs/page";
+import Testimonials from "@/Components/sections/TestimonialCard";
 
 
 
@@ -30,6 +31,7 @@ export default function Home () {
             <div className="bg-[#034EA2]">
             <CTASection/>
             </div>
+            <Testimonials/>
             <div className="bg-white">
             <FAQs/>
             </div>

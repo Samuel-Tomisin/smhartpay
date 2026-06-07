@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <div className="px-5 sm:px-10 md:px-16 lg:px-20">
+        <div className="bg-[#FAFAF9] px-5 sm:px-10 md:px-16 lg:px-20">
             {/* Top section: logo + nav columns */}
             <div className="max-w-6xl mx-auto py-12 md:py-20 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:flex lg:justify-between">
                 {/* Brand + app store — full width on mobile */}
@@ -14,9 +14,13 @@ export default function Footer() {
                         and iOS for fast,secure, and convenient <br />
                         banking anytime, anywhere.
                     </p>
-                    <div className="flex gap-1.5 flex-wrap">
-                        <img src="/images/store1.svg" alt="App store" className="cursor-pointer"/>
-                        <img src="/images/store2.svg" alt="Google play" className="cursor-pointer"/>
+                    <div className="flex items-center justify-center md:justify-start gap-2 md:gap-3">
+                        <Link href="https://play.google.com/store/apps?hl=en" target="_blank">
+                            <img src="./images/store2.svg" alt="" className="h-10 md:h-11 lg:h-auto w-auto cursor-pointer" />
+                        </Link>
+                        <Link href="https://www.apple.com/app-store/" target="_blank">
+                            <img src="./images/store1.svg" alt="" className="h-10 md:h-11 lg:h-auto w-auto cursor-pointer" />
+                        </Link>
                     </div>
                 </div>
 
@@ -58,9 +62,10 @@ export default function Footer() {
                 <div>
                     <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7] flex">Legal Links</h3>
                     <ul className="text-[14px] text-[#7C8FB7] space-y-1 flex flex-col">
-                        <Link href="/terms-of-Use" className="cursor-pointer">Terms of Use</Link>
+                        <Link href="/terms-of-use" className="cursor-pointer">Terms of Use</Link>
                         <Link href="/privacy-policy" className="cursor-pointer">Privacy Policy</Link>
                         <Link href="/cookie-policy" className="cursor-pointer">Cookie Policy</Link>
+                        <Link href="/legal" className="cursor-pointer">Legal</Link>
                     </ul>
                 </div>
             </div>

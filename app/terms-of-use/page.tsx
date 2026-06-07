@@ -1,5 +1,7 @@
 "use client";
 
+import Footer from "@/Components/layout/footer";
+import Navbar from "@/Components/layout/Navbar";
 import { useState, useEffect, useRef } from "react";
 
 // ─────────────────────────────────────────────────────────────────
@@ -456,6 +458,8 @@ export default function TermsofUse() {
   };
 
   return (
+    <div>
+      <Navbar />
     <div className="bg-white min-h-screen">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 md:px-10 py-14 sm:py-16 md:py-20">
 
@@ -500,6 +504,8 @@ export default function TermsofUse() {
 
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 }
