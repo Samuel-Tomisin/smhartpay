@@ -21,11 +21,9 @@ const companyItems = [
   { label: "Contact",  href: "/company/contact" },
 ];
 
-// ── Mobile icon map ──────────────────────────────────────────────────────────
-// Each icon is a small inline SVG wrapped in a colored rounded square,
-// matching the style shown in the DuraPayment screenshot.
+// ── Dropdown item icons (used in both mobile accordion AND desktop dropdown) ──
 
-function MobileIcon({ children, bg }: { children: React.ReactNode; bg: string }) {
+function ItemIcon({ children, bg }: { children: React.ReactNode; bg: string }) {
   return (
     <span
       className="flex items-center justify-center w-7 h-7 rounded-lg flex-shrink-0"
@@ -36,123 +34,86 @@ function MobileIcon({ children, bg }: { children: React.ReactNode; bg: string })
   );
 }
 
-const mobileNavIcons: Record<string, React.ReactNode> = {
-  // Top-level links
-  Home: (
-    <MobileIcon bg="#EEF2FF">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/>
-      </svg>
-    </MobileIcon>
-  ),
-  Pricing: (
-    <MobileIcon bg="#F0FDF4">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
-      </svg>
-    </MobileIcon>
-  ),
-  Blog: (
-    <MobileIcon bg="#FFF7ED">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#EA580C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
-      </svg>
-    </MobileIcon>
-  ),
-  "Help Centre": (
-    <MobileIcon bg="#F0F9FF">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0284C7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
-      </svg>
-    </MobileIcon>
-  ),
-  "Sign In": (
-    <MobileIcon bg="#FDF4FF">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9333EA" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/>
-      </svg>
-    </MobileIcon>
-  ),
-
+const dropdownIcons: Record<string, React.ReactNode> = {
   // Features sub-items
   Cards: (
-    <MobileIcon bg="#EFF6FF">
+    <ItemIcon bg="#EFF6FF">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
   "Gift Cards": (
-    <MobileIcon bg="#FFF1F2">
+    <ItemIcon bg="#FFF1F2">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E11D48" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
   "Receive Funds": (
-    <MobileIcon bg="#F0FDF4">
+    <ItemIcon bg="#F0FDF4">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 19 19 12"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
   Rewards: (
-    <MobileIcon bg="#FFFBEB">
+    <ItemIcon bg="#FFFBEB">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D97706" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
   Savings: (
-    <MobileIcon bg="#F0FDF4">
+    <ItemIcon bg="#F0FDF4">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#15803D" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16"/><line x1="3" y1="21" x2="21" y2="21"/><line x1="9" y1="10" x2="15" y2="10"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
   Transfers: (
-    <MobileIcon bg="#F5F3FF">
+    <ItemIcon bg="#F5F3FF">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
   VTU: (
-    <MobileIcon bg="#FFF7ED">
+    <ItemIcon bg="#FFF7ED">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
   Wallet: (
-    <MobileIcon bg="#EFF6FF">
+    <ItemIcon bg="#EFF6FF">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 12V7H5a2 2 0 010-4h14v4"/><path d="M3 5v14a2 2 0 002 2h16v-5"/><path d="M18 12a2 2 0 000 4h4v-4z"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
 
   // Company sub-items
   About: (
-    <MobileIcon bg="#F0F9FF">
+    <ItemIcon bg="#F0F9FF">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0369A1" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
   Careers: (
-    <MobileIcon bg="#FFF7ED">
+    <ItemIcon bg="#FFF7ED">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#EA580C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
   Contact: (
-    <MobileIcon bg="#F0FDF4">
+    <ItemIcon bg="#F0FDF4">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
       </svg>
-    </MobileIcon>
+    </ItemIcon>
   ),
 };
 
@@ -207,7 +168,7 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
                 href={item.href}
                 className="flex items-center gap-3 py-2 text-[13px] text-blue-900 hover:text-blue-600 transition-colors"
               >
-                {mobileNavIcons[item.label] ?? null}
+                {dropdownIcons[item.label] ?? null}
                 {item.label}
               </Link>
             ))}
@@ -238,14 +199,15 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
         </svg>
       </button>
 
-      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-52 bg-white border border-gray-100 rounded-xl shadow-xl shadow-blue-100/40 py-2 z-50 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200">
+      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-white border border-gray-100 rounded-xl shadow-xl shadow-blue-100/40 py-2 z-50 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200">
         <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-gray-100 rotate-45" />
         {items.map((item) => (
           <Link
             key={item.label}
             href={item.href}
-            className="block px-4 py-3 text-[13px] text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+            className="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
           >
+            {dropdownIcons[item.label] ?? null}
             {item.label}
           </Link>
         ))}
@@ -364,9 +326,8 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-3 py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+            className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
-            {mobileNavIcons["Home"]}
             Home
           </Link>
 
@@ -375,27 +336,24 @@ export default function Navbar() {
           <Link
             href="/pricing"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-3 py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+            className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
-            {mobileNavIcons["Pricing"]}
             Pricing
           </Link>
 
           <Link
             href="/blog"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-3 py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+            className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
-            {mobileNavIcons["Blog"]}
             Blog
           </Link>
 
           <Link
             href="/help-centre"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-3 py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+            className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
-            {mobileNavIcons["Help Centre"]}
             Help Centre
           </Link>
 
@@ -404,9 +362,8 @@ export default function Navbar() {
           <Link
             href="/sign-in"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-3 py-3 font-semibold text-[14px] text-blue-600 border-b border-gray-100"
+            className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
-            {mobileNavIcons["Sign In"]}
             Sign In
           </Link>
 
