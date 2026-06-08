@@ -21,7 +21,7 @@ export default function Features() {
 
           {/* HEADING */}
           <div>
-            <h1 className="text-[28px] sm:text-[32px] md:text-[36px] font-bold pb-4 md:pb-6">Our Services</h1>
+            <h1 className="text-[28px] text-black sm:text-[32px] md:text-[36px] font-bold pb-4 md:pb-6">Our Services</h1>
             <p className="text-[15px] sm:text-[16px] md:text-[18px] pb-6 md:pb-10 text-[#64748A]">
               We have quality solutions in place to{" "}
               <br className="hidden lg:block" />
