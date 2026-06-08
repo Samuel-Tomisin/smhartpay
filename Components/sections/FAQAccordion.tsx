@@ -149,13 +149,9 @@ export default function FAQs() {
   };
 
   return (
-    <section className="
-      px-5 py-14
-      sm:px-10 sm:py-16
-      md:px-14 md:py-20
-      lg:px-20
-      bg-white
-    ">
+    // ✅ Padding is only on the section for breathing room on small screens.
+    // max-w-6xl mx-auto on the inner div constrains width on large screens.
+    <section className="bg-white px-5 py-14 sm:py-16 md:py-20">
       <div className="max-w-6xl mx-auto">
 
         {/* ── Heading ── */}

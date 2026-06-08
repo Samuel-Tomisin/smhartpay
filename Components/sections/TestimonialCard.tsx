@@ -284,11 +284,6 @@ export default function Testimonials() {
 
   return (
     <>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-      />
-
       <style>{`
         @keyframes slide-in {
           from { opacity: 0; transform: translateX(24px); }
@@ -303,8 +298,14 @@ export default function Testimonials() {
         .count-up { animation: count-up 0.5s ease both; }
       `}</style>
 
+      {/*
+        ✅ FIX: removed md:px-10 lg:px-20 from the section.
+           max-w-6xl mx-auto on the inner div already centres and
+           caps the width on large screens — no extra px needed here.
+           Keep only px-5 for small-screen edge breathing room.
+      */}
       <section
-        className="relative bg-[#F5F7FB] px-4 sm:px-6 md:px-10 lg:px-20 py-14 md:py-20 overflow-hidden"
+        className="relative bg-[#F5F7FB] px-5 py-14 md:py-20 overflow-hidden"
         style={{ fontFamily: "Inter, Helvetica, sans-serif" }}
         onMouseEnter={pauseAutoplay}
       >
@@ -318,6 +319,7 @@ export default function Testimonials() {
           }}
         />
 
+        {/* ✅ max-w-6xl mx-auto is already here — this is correct */}
         <div className="max-w-6xl mx-auto relative z-10">
 
           {/* ── Header ── */}
@@ -335,10 +337,7 @@ export default function Testimonials() {
                 </span>
               </div>
 
-              <h2
-                className="text-[26px] sm:text-[30px] md:text-[36px] font-bold text-[#1A202E] leading-tight"
-                style={{ fontFamily: "Inter, Helvetica, sans-serif" }}
-              >
+              <h2 className="text-[26px] sm:text-[30px] md:text-[36px] font-bold text-[#1A202E] leading-tight">
                 Loved by Nigerians{" "}
                 <br className="hidden sm:block" />
                 <span className="text-[#034EA2]">Across Every City</span>
@@ -413,10 +412,7 @@ export default function Testimonials() {
                 className="flex flex-col items-center justify-center text-center px-4 count-up"
                 style={{ animationDelay: `${i * 80}ms` }}
               >
-                <span
-                  className="text-[24px] sm:text-[28px] font-bold text-[#034EA2]"
-                  style={{ fontFamily: "Inter, Helvetica, sans-serif" }}
-                >
+                <span className="text-[24px] sm:text-[28px] font-bold text-[#034EA2]">
                   {value}
                 </span>
                 <span className="text-[12px] text-[#64748B] mt-0.5 font-medium">
@@ -432,13 +428,21 @@ export default function Testimonials() {
               Join over 500,000 Nigerians already banking smarter.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2 md:gap-3">
-                    <Link href="https://play.google.com/store/apps?hl=en" target="_blank">
-                        <img src="./images/store2.svg" alt="" className="h-10 md:h-11 lg:h-auto w-auto cursor-pointer" />
-                    </Link>
-                    <Link href="https://www.apple.com/app-store/" target="_blank">
-                        <img src="./images/store1.svg" alt="" className="h-10 md:h-11 lg:h-auto w-auto cursor-pointer" />
-                    </Link>
-             </div>
+              <Link href="https://play.google.com/store/apps?hl=en" target="_blank">
+                <img
+                  src="./images/store2.svg"
+                  alt="Get it on Google Play"
+                  className="h-10 md:h-11 lg:h-auto w-auto cursor-pointer"
+                />
+              </Link>
+              <Link href="https://www.apple.com/app-store/" target="_blank">
+                <img
+                  src="./images/store1.svg"
+                  alt="Download on the App Store"
+                  className="h-10 md:h-11 lg:h-auto w-auto cursor-pointer"
+                />
+              </Link>
+            </div>
           </div>
 
         </div>

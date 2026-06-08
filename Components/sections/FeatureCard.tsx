@@ -32,7 +32,7 @@ export default function Features() {
           {/* CARD 1 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 text-[#034EA2] rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Wallet className="text-blue-800" />
+              <Wallet className="text-[#034EA2]" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Wallet
               </h2>
@@ -47,7 +47,7 @@ export default function Features() {
           {/* CARD 2 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Send className="text-blue-800" />
+              <Send className="text-[#034EA2]" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Transfer
               </h2>
@@ -66,7 +66,7 @@ export default function Features() {
           {/* CARD 3 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <HandCoins className="text-blue-800" />
+              <HandCoins className="text-[#034EA2]" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Receive Funds
               </h2>
@@ -80,7 +80,7 @@ export default function Features() {
           {/* CARD 4 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Smartphone className="text-blue-800" />
+              <Smartphone className="text-[#034EA2]" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 VTU
               </h2>
@@ -94,7 +94,7 @@ export default function Features() {
           {/* CARD 5 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Gift className="text-blue-800" />
+              <Gift className="text-[#034EA2]" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Gift Cards
               </h2>
@@ -113,7 +113,7 @@ export default function Features() {
           {/* CARD 6 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Landmark className="text-blue-800" />
+              <Landmark className="text-[#034EA2]" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Savings
               </h2>
@@ -127,7 +127,7 @@ export default function Features() {
           {/* CARD 7 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <Gem className="text-blue-800" />
+              <Gem className="text-[#034EA2]" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Rewards
               </h2>
@@ -141,7 +141,7 @@ export default function Features() {
           {/* CARD 8 */}
           <div className="bg-white pb-10 md:pb-14 px-6 md:px-8 pt-8 md:pt-10 rounded-lg shadow-md">
             <div className="flex items-center gap-4 mb-4">
-              <CreditCard className="text-blue-800" />
+              <CreditCard className="text-[#034EA2]" />
               <h2 className="text-[15px] md:text-[16px] font-bold text-[#034EA2]">
                 Cards
               </h2>
