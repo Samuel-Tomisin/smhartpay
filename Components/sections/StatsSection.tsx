@@ -8,7 +8,7 @@ export default function Getstarted() {
     // ✅ Only small-screen breathing room on the section.
     // max-w-6xl mx-auto handles centring and width cap on large screens.
     <section className="text-white px-5 py-12 sm:py-16 md:py-20">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-6 text-center md:text-left">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-6 text-center md:text-left">
 
         {/* Description text */}
         <p className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-relaxed">
