@@ -23,6 +23,7 @@ import {
   Coins,
 } from "lucide-react";
 import Navbar from "@/Components/layout/Navbar";
+import Footer2 from "@/Components/layout/footer2";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 interface Tier {
@@ -719,6 +720,7 @@ export default function RewardsPage() {
 
       </div>
     </>
+    <Footer2/>
     </div>
   );
 }

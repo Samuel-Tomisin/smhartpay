@@ -320,7 +320,7 @@ export default function Testimonials() {
         />
 
         {/* ✅ max-w-6xl mx-auto is already here — this is correct */}
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="max-w-5xl mx-auto relative z-10">
 
           {/* ── Header ── */}
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10 md:mb-12">

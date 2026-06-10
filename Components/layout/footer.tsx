@@ -28,7 +28,7 @@ export default function Footer() {
                 <div>
                     <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7]">Product Links</h3>
                     <ul className="text-[14px] text-[#7C8FB7] space-y-1 flex flex-col">
-                        <Link href="/transfers" className="cursor-pointer">Transfers</Link>
+                        <Link href="/transfer" className="cursor-pointer">Transfers</Link>
                         <Link href="/wallet" className="cursor-pointer">Wallet</Link>
                         <Link href="/savings" className="cursor-pointer">Savings</Link>
                         <Link href="/cards" className="cursor-pointer">Cards</Link>

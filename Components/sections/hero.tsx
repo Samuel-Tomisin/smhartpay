@@ -17,16 +17,16 @@ export default function Hero() {
       ">
 
         {/* ── Left: text content ── */}
-        <div className="w-full text-center lg:text-left lg:max-w-[55%]">
+        <div className="w-full text-center lg:text-left lg:max-w-[48%]">
 
           {/* Heading */}
           <h1 className="
             font-bold leading-tight text-black
-            text-[32px]
-            sm:text-[42px]
-            md:text-[50px]
-            lg:text-[52px]
-            xl:text-[58px]
+            text-[28px]
+            sm:text-[38px]
+            md:text-[46px]
+            lg:text-[48px]
+            xl:text-[54px]
           ">
             Your All-In-One Safe{" "}
             <span className="block">Digital Banking App</span>
@@ -84,20 +84,21 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ── Mockup image — below text on mobile, right side on desktop ── */}
-        <div className="w-full flex justify-center lg:w-auto lg:flex-shrink-0">
+        {/* ── Mockup image ── */}
+        <div className="w-full lg:w-[52%] flex justify-center lg:justify-end">
           <img
-            src="./images/download.png"
-            alt="SmhartPay mobile app screenshot"
+            src="./images/laptop.png"
+            alt="SmhartPay laptop app screenshot"
             className="
-              w-[240px]
-              sm:w-[300px]
-              md:w-[340px]
-              lg:w-[380px]
-              xl:w-[440px]
+              w-[85%]
+              sm:w-[75%]
+              md:w-[70%]
+              lg:w-full
+              xl:w-full
+              max-w-[680px]
               h-auto object-contain
             "
-            loading="eager"
+            loading="lazy"
           />
         </div>
 

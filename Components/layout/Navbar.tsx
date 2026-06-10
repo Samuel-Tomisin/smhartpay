@@ -273,7 +273,7 @@ export default function Navbar() {
 
       {/* ── Top bar ── */}
       <div className="w-full px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto flex justify-between items-center py-3">
+        <div className="max-w-5xl mx-auto flex justify-between items-center py-3">
 
           {/* Logo */}
           <Link href="/">

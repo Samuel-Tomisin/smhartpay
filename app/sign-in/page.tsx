@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Footer2 from "@/Components/layout/footer2";
 
 const countryCodes = [
   { code: "+234", country: "NG", flag: "🇳🇬", name: "Nigeria" },
@@ -94,12 +95,12 @@ export default function SignIn() {
           <div>
             <p className="text-white text-sm mb-1">Please verify you are using the right URL</p>
             <Link
-              href="https://online.safehavenmfb.com"
+              href="https://online.smhartpay.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white text-sm font-medium underline underline-offset-2"
             >
-              https://online.safehavenmfb.com
+              https://online.smhartpay.com
             </Link>
           </div>
           <div className="shrink-0 w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
@@ -239,6 +240,7 @@ export default function SignIn() {
           </p>
         </div>
       </div>
+      <Footer2/>
     </div>
   );
 }

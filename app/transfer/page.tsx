@@ -1,5 +1,8 @@
 "use client";
 
+import Footer from "@/Components/layout/footer";
+import Footer2 from "@/Components/layout/footer2";
+import Navbar from "@/Components/layout/Navbar";
 import { useState, useRef, useEffect } from "react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -255,6 +258,8 @@ export default function TransferPage() {
   );
 
   return (
+    <div>
+      <Navbar />
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
       <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
 
@@ -801,5 +806,7 @@ export default function TransferPage() {
         )}
       </div>
     </div>
+    <Footer />
+  </div>
   );
 }

@@ -25,7 +25,7 @@ export default function CTASection () {
                     </div>
                 </div>
                 <div className="flex justify-center w-full md:w-auto">
-                    <img src="./images/phone.svg" alt="" className="w-[120px] sm:w-[160px] md:w-[200px] lg:w-auto h-auto" />
+                    <img src="./images/phone3.png" alt="" className="w-[120px] sm:w-[160px] md:w-[200px] lg:w-auto h-auto" />
                 </div>
             </div>
         </div>

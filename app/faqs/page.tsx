@@ -160,7 +160,7 @@ export default function FAQs() {
       lg:px-20
       bg-white
     ">
-      <div className="max-w-8xl mx-auto">
+      <div className="max-w-6xl mx-auto">
 
         {/* ── Heading ── */}
         <h2 className="

@@ -22,6 +22,8 @@ import {
   TrendingUp,
   Coins,
 } from "lucide-react";
+import Footer2 from "@/Components/layout/footer2";
+import Navbar from "@/Components/layout/Navbar";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 interface Tier {
@@ -255,6 +257,8 @@ export default function RewardsPage() {
       : REWARDS.filter((r) => r.category === activeCategory);
 
   return (
+    <div>
+      <Navbar/>
     <>
       <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
@@ -716,5 +720,7 @@ export default function RewardsPage() {
 
       </div>
     </>
+    <Footer2/>
+    </div>
   );
 }

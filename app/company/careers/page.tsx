@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/Components/layout/Navbar";
 import Footer from "@/Components/layout/footer";
+import Footer2 from "@/Components/layout/footer2";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 interface Job {
@@ -695,7 +696,7 @@ export default function CareersPage() {
         <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
       )}
     </>
-    <Footer />
+    <Footer2/>
     </div>
   );
 }

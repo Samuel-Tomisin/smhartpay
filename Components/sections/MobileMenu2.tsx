@@ -19,7 +19,7 @@ export default function Mobile2 () {
                     </a>
                 </div>
                 <div className="flex justify-center w-full md:w-auto">
-                    <img src="./images/image2.jpeg" alt="" className="w-[260px] sm:w-[300px] md:w-[360px] lg:size-105 h-auto" />
+                    <img src="./images/phone2.png" alt="" className="w-[260px] sm:w-[300px] md:w-[360px] lg:size-105 h-auto" />
                 </div>
             </div>
         </div>
