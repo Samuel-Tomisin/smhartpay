@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/Components/layout/Navbar";
 import Footer from "@/Components/layout/footer";
+import Footer2 from "@/Components/layout/footer2";
 
 // ─── Store URLs ───────────────────────────────────────────────────
 const APP_STORE_URL  = "https://apps.apple.com/your-app-link";          // ← iOS link
@@ -726,7 +727,7 @@ export default function PricingPage() {
       </section>
 
     </main>
-    <Footer />
+    <Footer2 />
     </div>
   );
 }

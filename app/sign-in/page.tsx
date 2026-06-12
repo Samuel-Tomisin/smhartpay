@@ -57,9 +57,8 @@ export default function SignIn() {
   );
 
   function handleTabSwitch(tab: "individual" | "corporate") {
-    setActiveTab(tab);
-    router.push(tab === "individual" ? "/signin" : "/signin/corporate");
-  }
+  setActiveTab(tab);
+}
 
   function handleContinue() {
     if (activeTab === "individual") {

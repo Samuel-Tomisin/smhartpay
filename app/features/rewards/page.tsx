@@ -708,10 +708,10 @@ export default function RewardsPage() {
               </div>
               <div className="flex flex-wrap gap-3 justify-center sm:justify-end flex-shrink-0">
                 <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-                  <img src="./images/store2.svg" alt="Google Play" className="h-11 w-auto cursor-pointer" />
+                  <img src="/images/store2.svg" alt="Google Play" className="h-11 w-auto cursor-pointer" />
                 </a>
                 <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-                  <img src="./images/store1.svg" alt="App Store" className="h-11 w-auto cursor-pointer" />
+                  <img src="/images/store1.svg" alt="App Store" className="h-11 w-auto cursor-pointer" />
                 </a>
               </div>
             </div>

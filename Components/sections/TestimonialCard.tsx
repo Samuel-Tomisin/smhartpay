@@ -13,23 +13,24 @@ interface Testimonial {
   avatar: string;
   rating: number;
   text: string;
-  feature: string;
-  featureColor: string;
+  // feature: string;
   joined: string;
 }
 
 // ── Data ──────────────────────────────────────────────────────────────────
+// Avatar photos: free Nigerian/African portraits from Unsplash (Unsplash License)
+// cropped to face, 150×150 px for fast loading
 const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
     name: "Adaeze Okonkwo",
     handle: "@adaeze_o",
     location: "Lagos, Nigeria",
-    avatar: "AO",
+    avatar:
+      "https://images.unsplash.com/photo-1644152993066-9b9ee687930d?w=150&h=150&fit=crop&crop=faces&auto=format&q=80",
     rating: 5,
     text: "I've tried so many banking apps and SmhartPay is just on another level. Sending money to my mum in Enugu is now as simple as sending a text. No failed transactions, no delays — it just works.",
-    feature: "Transfers",
-    featureColor: "#034EA2",
+    // feature: "Transfers",
     joined: "Member since 2024",
   },
   {
@@ -37,11 +38,11 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Emeka Nwosu",
     handle: "@emekanwosu",
     location: "Abuja, Nigeria",
-    avatar: "EN",
+    avatar:
+      "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=150&h=150&fit=crop&crop=faces&auto=format&q=80",
     rating: 5,
     text: "The savings feature completely changed how I manage my money. I set a goal, automated my contributions, and hit my target in 4 months. The rewards on top were a pleasant surprise.",
-    feature: "Savings",
-    featureColor: "#065f46",
+    // feature: "Savings",
     joined: "Member since 2023",
   },
   {
@@ -49,11 +50,11 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Fatima Al-Hassan",
     handle: "@fatimaah",
     location: "Kano, Nigeria",
-    avatar: "FA",
+    avatar:
+      "https://images.unsplash.com/photo-1615453262312-022a72d3842a?w=150&h=150&fit=crop&crop=faces&auto=format&q=80",
     rating: 5,
     text: "As someone who runs a small business, being able to manage payments and track expenses from one app is invaluable. The virtual card alone saves me so much stress when paying online.",
-    feature: "Virtual Cards",
-    featureColor: "#7c3aed",
+    // feature: "Virtual Cards",
     joined: "Member since 2024",
   },
   {
@@ -61,11 +62,11 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Chidi Okafor",
     handle: "@chidiokafor",
     location: "Port Harcourt, Nigeria",
-    avatar: "CO",
+    avatar:
+      "https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=150&h=150&fit=crop&crop=faces&auto=format&q=80",
     rating: 5,
     text: "I was sceptical at first, but after my first month the app has never let me down. Buying airtime and paying my electricity bill takes seconds. Customer support actually responds too!",
-    feature: "VTU Services",
-    featureColor: "#b45309",
+    // feature: "VTU Services",
     joined: "Member since 2023",
   },
   {
@@ -73,11 +74,11 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Ngozi Adeleke",
     handle: "@ngozi_a",
     location: "Ibadan, Nigeria",
-    avatar: "NA",
+    avatar:
+      "https://images.unsplash.com/photo-1641932481849-9ac1cacf360c?w=150&h=150&fit=crop&crop=faces&auto=format&q=80",
     rating: 5,
     text: "I recommended SmhartPay to my entire family and they all love it. The referral rewards were generous, and watching my points grow every week makes banking genuinely enjoyable.",
-    feature: "Rewards",
-    featureColor: "#be185d",
+    // feature: "Rewards",
     joined: "Member since 2024",
   },
   {
@@ -85,11 +86,11 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Tunde Fashola",
     handle: "@tundefashola",
     location: "Lagos, Nigeria",
-    avatar: "TF",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces&auto=format&q=80",
     rating: 5,
     text: "The security features give me real peace of mind. Biometric login, instant transaction alerts, the ability to freeze my card in seconds — I actually feel like my money is protected.",
-    feature: "Security",
-    featureColor: "#0e7490",
+    // feature: "Security",
     joined: "Member since 2023",
   },
 ];
@@ -102,36 +103,27 @@ const STATS = [
 ];
 
 // ── Avatar ─────────────────────────────────────────────────────────────────
-const AVATAR_GRADIENTS: Record<string, string> = {
-  AO: "from-blue-500 to-blue-700",
-  EN: "from-emerald-500 to-emerald-700",
-  FA: "from-rose-500 to-rose-700",
-  CO: "from-amber-500 to-amber-700",
-  NA: "from-pink-500 to-pink-700",
-  TF: "from-cyan-500 to-cyan-700",
-};
-
 function Avatar({
-  initials,
+  src,
+  name,
   size = "md",
 }: {
-  initials: string;
+  src: string;
+  name: string;
   size?: "sm" | "md" | "lg";
 }) {
   const sz =
     size === "lg"
-      ? "w-14 h-14 text-[18px]"
+      ? "w-14 h-14"
       : size === "md"
-      ? "w-11 h-11 text-[14px]"
-      : "w-8 h-8 text-[11px]";
+      ? "w-11 h-11"
+      : "w-8 h-8";
   return (
-    <div
-      className={`${sz} rounded-full bg-gradient-to-br ${
-        AVATAR_GRADIENTS[initials] ?? "from-slate-500 to-slate-700"
-      } flex items-center justify-center text-white font-bold flex-shrink-0`}
-    >
-      {initials}
-    </div>
+    <img
+      src={src}
+      alt={name}
+      className={`${sz} rounded-full object-cover flex-shrink-0 ring-2 ring-gray-100`}
+    />
   );
 }
 
@@ -155,48 +147,26 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 // ── Testimonial Card ───────────────────────────────────────────────────────
-function TestimonialCard({
-  testimonial,
-  featured = false,
-}: {
-  testimonial: Testimonial;
-  featured?: boolean;
-}) {
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div
-      className={`relative flex flex-col h-full rounded-2xl transition-all duration-300 overflow-hidden
-        ${
-          featured
-            ? "bg-[#034EA2] shadow-xl shadow-[#034EA2]/20"
-            : "bg-white border border-gray-100 hover:border-[#034EA2]/20 hover:shadow-md"
-        }`}
-    >
+    <div className="relative flex flex-col h-full rounded-2xl transition-all duration-300 overflow-hidden bg-white border border-gray-100 text-black hover:border-[#034EA2]/20 hover:shadow-md">
       {/* Feature tag */}
-      <div className="absolute top-5 right-5">
-        <span
-          className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${
-            featured ? "bg-white/20 text-white" : "text-white"
-          }`}
-          style={featured ? undefined : { background: testimonial.featureColor }}
-        >
+      {/* <div className="absolute top-5 right-5">
+        <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#034EA2] text-white">
           {testimonial.feature}
         </span>
-      </div>
+      </div> */}
 
       <div className="p-6 flex flex-col gap-4 flex-1">
         {/* Quote icon */}
         <Quote
           size={28}
-          className={`${featured ? "text-white/30" : "text-[#034EA2]/15"} -mb-1`}
+          className="text-[#034EA2]/15 -mb-1"
           aria-hidden="true"
         />
 
         {/* Review text */}
-        <p
-          className={`text-[13px] sm:text-[14px] leading-relaxed flex-1 ${
-            featured ? "text-blue-100" : "text-[#374151]"
-          }`}
-        >
+        <p className="text-[13px] sm:text-[14px] leading-relaxed flex-1 text-[#374151]">
           "{testimonial.text}"
         </p>
 
@@ -204,24 +174,16 @@ function TestimonialCard({
         <StarRating rating={testimonial.rating} />
 
         {/* Divider */}
-        <div className={`h-px ${featured ? "bg-white/20" : "bg-gray-100"}`} />
+        <div className="h-px bg-gray-100" />
 
         {/* Author */}
         <div className="flex items-center gap-3">
-          <Avatar initials={testimonial.avatar} size="md" />
+          <Avatar src={testimonial.avatar} name={testimonial.name} size="md" />
           <div className="min-w-0">
-            <p
-              className={`text-[14px] font-bold leading-tight truncate ${
-                featured ? "text-white" : "text-gray-900"
-              }`}
-            >
+            <p className="text-[14px] font-bold leading-tight truncate text-gray-900">
               {testimonial.name}
             </p>
-            <p
-              className={`text-[11px] mt-0.5 ${
-                featured ? "text-blue-200" : "text-gray-400"
-              }`}
-            >
+            <p className="text-[11px] mt-0.5 text-gray-400">
               {testimonial.location} · {testimonial.joined}
             </p>
           </div>
@@ -298,12 +260,6 @@ export default function Testimonials() {
         .count-up { animation: count-up 0.5s ease both; }
       `}</style>
 
-      {/*
-        ✅ FIX: removed md:px-10 lg:px-20 from the section.
-           max-w-6xl mx-auto on the inner div already centres and
-           caps the width on large screens — no extra px needed here.
-           Keep only px-5 for small-screen edge breathing room.
-      */}
       <section
         className="relative bg-[#F5F7FB] px-5 py-14 md:py-20 overflow-hidden"
         style={{ fontFamily: "Inter, Helvetica, sans-serif" }}
@@ -319,24 +275,11 @@ export default function Testimonials() {
           }}
         />
 
-        {/* ✅ max-w-6xl mx-auto is already here — this is correct */}
         <div className="max-w-6xl mx-auto relative z-10">
 
           {/* ── Header ── */}
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10 md:mb-12">
             <div>
-              {/* Eyebrow */}
-              <div className="flex items-center gap-2 mb-3">
-                <div className="flex -space-x-2">
-                  {["AO", "EN", "FA"].map((i) => (
-                    <Avatar key={i} initials={i} size="sm" />
-                  ))}
-                </div>
-                <span className="text-[12px] font-semibold text-[#64748B]">
-                  500,000+ users trust SmhartPay
-                </span>
-              </div>
-
               <h2 className="text-[26px] sm:text-[30px] md:text-[36px] font-bold text-[#1A202E] leading-tight">
                 Loved by Nigerians{" "}
                 <br className="hidden sm:block" />
@@ -380,10 +323,7 @@ export default function Testimonials() {
                 className="slide-in"
                 style={{ animationDelay: `${i * 60}ms` }}
               >
-                <TestimonialCard
-                  testimonial={t}
-                  featured={visibleCount === 3 && i === 1}
-                />
+                <TestimonialCard testimonial={t} />
               </div>
             ))}
           </div>
@@ -412,7 +352,7 @@ export default function Testimonials() {
                 className="flex flex-col items-center justify-center text-center px-4 count-up"
                 style={{ animationDelay: `${i * 80}ms` }}
               >
-                <span className="text-[24px] sm:text-[28px] font-bold text-[#034EA2]">
+                <span className="text-[24px] sm:text-[28px] font-bold text-black">
                   {value}
                 </span>
                 <span className="text-[12px] text-[#64748B] mt-0.5 font-medium">

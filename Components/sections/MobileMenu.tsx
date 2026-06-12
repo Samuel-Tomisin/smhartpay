@@ -26,7 +26,7 @@ export default function Mobile() {
             <img
               src="./images/hand2.png"
               alt="Mobile banking app"
-              className="relative z-10 w-[200px] sm:w-[230px] md:w-[270px] lg:w-[300px] h-auto drop-shadow-2xl"
+              className="relative z-10 w-[200px] sm:w-[230px] md:w-[270px] lg:w-[300px] h-auto drop-shadow-2xl oject-contain"
               style={{ filter: 'drop-shadow(0 24px 40px rgba(3, 78, 162, 0.18))' }}
             />
 

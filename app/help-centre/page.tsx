@@ -662,7 +662,7 @@ export default function HelpCentrePage() {
 
                 <span className={`inline-flex items-center gap-1.5 text-[13px] font-semibold
                   transition-colors duration-150
-                  ${opt.highlight ? "text-yellow-300" : "text-[#034EA2]"}`}>
+                  ${opt.highlight ? "text-white" : "text-[#034EA2]"}`}>
                   {opt.cta}
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none"
                     stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"

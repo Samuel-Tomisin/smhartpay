@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CTASection () {
     return(
-        <div className="mt-20 pt-10 md:pt-12 lg:pt-15 px-6 md:px-10 lg:px-20">
+        <div className="pt-20 md:pt-12 lg:pt-15 px-6 md:px-10 lg:px-20">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
                 <div className="w-full md:w-1/2 text-center md:text-left">
                     <h1 className="text-[28px] sm:text-[32px] md:text-[34px] lg:text-[36px] font-semibold text-[#E5E7EB] leading-tight">
@@ -25,7 +25,7 @@ export default function CTASection () {
                     </div>
                 </div>
                 <div className="flex justify-center w-full md:w-auto">
-                    <img src="./images/phone3.png" alt="" className="w-[120px] sm:w-[160px] md:w-[200px] lg:w-auto h-auto" />
+                    <img src="./images/phone3.png" alt="Phone showcasing SmhartPay's mobile app interface" className="w-[120px] sm:w-[160px] md:w-[200px] lg:w-auto h-auto object-contain" />
                 </div>
             </div>
         </div>

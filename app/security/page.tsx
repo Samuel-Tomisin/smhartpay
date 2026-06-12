@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import Footer from "@/Components/layout/footer";
 import Navbar from "@/Components/layout/Navbar";
+import Footer2 from "@/Components/layout/footer2";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 interface SecurityFeature {
@@ -883,7 +884,7 @@ export default function SecurityPage() {
 
       </div>
     </>
-    <Footer />
+    <Footer2 />
     </div>
   );
 }

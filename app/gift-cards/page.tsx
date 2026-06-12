@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Footer from "@/Components/layout/footer";
+import Navbar from "@/Components/layout/Navbar";
+import Footer2 from "@/Components/layout/footer2";
 
 // ─── Store URLs ───────────────────────────────────────────────────
 const APP_STORE_URL  = "https://apps.apple.com/your-app-link";
@@ -40,7 +43,7 @@ const giftCards = [
     tagline: "App Store, iTunes & Apple services",
     color: "from-gray-700 to-gray-900",
     textColor: "text-white",
-    logo: "",
+    logo: "🍎",
     denominations: ["$15", "$25", "$50", "$100"],
     currency: "USD",
     popular: true,
@@ -294,19 +297,19 @@ const testimonials = [
     quote: "I bought a Netflix gift card for my sister's birthday in 2 minutes. She got the code instantly. Absolutely love this feature!",
     name: "Funmi Adeyemi",
     role: "Marketing Professional, Lagos",
-    avatar: "https://i.pravatar.cc/150?img=47",
+    avatar: "https://images.unsplash.com/photo-1615453262312-022a72d3842a?w=150&h=150&fit=crop&crop=faces&auto=format&q=80",
   },
   {
     quote: "I top up my PlayStation wallet every month through SmhartPay. It's the fastest and most reliable way to buy PSN cards in Nigeria.",
     name: "Chukwuemeka Obi",
     role: "Software Engineer, Abuja",
-    avatar: "https://i.pravatar.cc/150?img=12",
+    avatar: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=150&h=150&fit=crop&crop=faces&auto=format&q=80",
   },
   {
     quote: "Sent an Amazon gift card to my cousin in the US without leaving the app. The conversion was fair and the process was seamless.",
     name: "Blessing Nwosu",
     role: "Business Owner, Port Harcourt",
-    avatar: "https://i.pravatar.cc/150?img=32",
+    avatar: "https://images.unsplash.com/photo-1641932481849-9ac1cacf360c?w=150&h=150&fit=crop&crop=faces&auto=format&q=80",
   },
 
   // ── ADD MORE TESTIMONIALS BELOW ───────────────────────────────
@@ -518,6 +521,8 @@ export default function GiftCardsPage() {
   const displayed = showAll ? filtered : filtered.slice(0, 8);
 
   return (
+    <div>
+        <Navbar />
     <main className="bg-white">
 
       {/* ══════════════════════════════════════════
@@ -570,10 +575,10 @@ export default function GiftCardsPage() {
             <div className="w-full max-w-sm lg:max-w-xs xl:max-w-sm flex-shrink-0">
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { name: "Amazon",      color: "from-orange-400 to-orange-600", logo: "🛒" },
-                  { name: "Netflix",     color: "from-red-600 to-red-800",       logo: "🎬" },
-                  { name: "PlayStation", color: "from-blue-600 to-blue-800",     logo: "🎮" },
-                  { name: "Spotify",     color: "from-green-400 to-green-600",   logo: "🎵" },
+                  { name: "Amazon",      color: "from-orange-400 to-orange-600",  },
+                  { name: "Netflix",     color: "from-red-600 to-red-800",        },
+                  { name: "PlayStation", color: "from-blue-600 to-blue-800",      },
+                  { name: "Spotify",     color: "from-green-400 to-green-600",   },
                 ].map((card, i) => (
                   <div key={i}
                     className={`bg-gradient-to-br ${card.color} rounded-2xl p-4
@@ -582,7 +587,7 @@ export default function GiftCardsPage() {
                       ${i === 0 ? "col-span-1" : ""}`}>
                     <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-white/10"/>
                     <div className="absolute -bottom-5 -left-5 w-20 h-20 rounded-full bg-white/10"/>
-                    <span className="text-2xl z-10">{card.logo}</span>
+                    {/* <span className="text-2xl z-10">{card.logo}</span> */}
                     <span className="text-[14px] font-bold text-white z-10">
                       {card.name}
                     </span>
@@ -640,7 +645,7 @@ export default function GiftCardsPage() {
               <div key={i}
                 className="relative bg-white rounded-2xl p-6 sm:p-7 border
                   border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <span className="text-[44px] font-black text-gray-100 leading-none block mb-2">
+                <span className="text-[44px] font-black text-black leading-none block mb-2">
                   {step.number}
                 </span>
                 <span className="text-3xl block mb-4">{step.icon}</span>
@@ -901,5 +906,7 @@ export default function GiftCardsPage() {
       </section>
 
     </main>
+    <Footer2/>
+    </div>
   );
 }

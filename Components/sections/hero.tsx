@@ -77,7 +77,7 @@ export default function Hero() {
               <img
                 src="./images/ndic.svg"
                 alt="Nigeria Deposit Insurance Corporation logo"
-                className="h-6 w-auto sm:h-7 md:h-8"
+                className="h-6 w-auto sm:h-7 md:h-8 object-contain"
                 loading="lazy"
               />
             </div>

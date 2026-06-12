@@ -160,21 +160,21 @@ const testimonials = [
       "I saved up for my daughter's school fees in 6 months using SmhartPay Target Save. The automated contributions made it effortless.",
     name: "Adaeze Obi",
     role: "Teacher, Enugu",
-    avatar: "https://i.pravatar.cc/150?img=47",
+    avatar: "https://randomuser.me/api/portraits/women/75.jpg",
   },
   {
     quote:
       "Fixed Save gave me the discipline I needed. I locked my money and didn't touch it — came out with 15% returns. Absolutely worth it.",
     name: "Emeka Nnaji",
     role: "Engineer, Abuja",
-    avatar: "https://i.pravatar.cc/150?img=12",
+    avatar: "https://randomuser.me/api/portraits/men/78.jpg",
   },
   {
     quote:
       "I love that I can have multiple savings goals at once. My emergency fund and travel fund are both growing side by side.",
     name: "Tolu Fashola",
     role: "Entrepreneur, Lagos",
-    avatar: "https://i.pravatar.cc/150?img=32",
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
   },
 ];
 

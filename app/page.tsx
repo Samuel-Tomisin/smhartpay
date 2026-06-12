@@ -26,6 +26,8 @@ export default function Home () {
             </div>
             <div className="bg-white">
             <Mobile/>
+            </div>
+            <div className="bg-white">
             <Mobile2/>
             </div>
             <div className="bg-[#034EA2]">
