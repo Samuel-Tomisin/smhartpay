@@ -10,10 +10,10 @@ export default function Contact() {
     <div>
       <Navbar />
 
-      <div className="flex justify-center flex-col items-center px-4 sm:px-8 md:px-14 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-28">
+      <div className="flex justify-center flex-col bg-white items-center px-4 sm:px-8 md:px-14 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-28">
 
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-[42px] lg:text-[50px] font-bold text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-[42px] text-black lg:text-[50px] font-bold text-center">
           Contact Us
         </h1>
 

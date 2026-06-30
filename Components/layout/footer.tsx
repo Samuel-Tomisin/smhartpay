@@ -1,5 +1,7 @@
 "use client"
 import Link from 'next/link';
+import { AppStoreButton } from '../ui/AppStoreButton';
+import { PlayStoreButton } from '../ui/PlayStoreButton';
 
 export default function Footer() {
     return (
@@ -10,17 +12,18 @@ export default function Footer() {
                 <div className="col-span-2 sm:col-span-3 lg:col-span-1">
                     <img src="/images/logo.png" alt="" className="size-14 cursor-pointer"/>
                     <p className="text-[14px] py-6 text-[#7C8FB7]">
-                        Download the SmhartPay app on Android <br />
-                        and iOS for fast,secure, and convenient <br />
+                        Download the SmhartPay app on Android 
+                        and iOS for <br /> fast,secure, and convenient
                         banking anytime, anywhere.
                     </p>
                     <div className="flex items-center justify-center md:justify-start gap-2 md:gap-3">
-                        <Link href="https://play.google.com/store/apps?hl=en" target="_blank">
-                            <img src="./images/store2.svg" alt="" className="h-10 md:h-11 lg:h-auto w-auto cursor-pointer" />
+                        <AppStoreButton/> <PlayStoreButton/>
+                        {/* <Link href="https://play.google.com/store/apps?hl=en" target="_blank">
+                            <img src="./images/store2.svg" alt="" className="h-10 md:h-11 lg:h-auto w-auto cursor-pointer text-black" />
                         </Link>
                         <Link href="https://www.apple.com/app-store/" target="_blank">
                             <img src="./images/store1.svg" alt="" className="h-10 md:h-11 lg:h-auto w-auto cursor-pointer" />
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
 

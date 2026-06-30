@@ -563,7 +563,7 @@ export default function LegalPage() {
               <h1 className="font-bold leading-tight mb-5
                 text-[30px] sm:text-[38px] md:text-[46px] lg:text-[50px]">
                 Built on transparency.
-                <span className="block text-yellow-300">Governed by law.</span>
+                <span className="block text-black">Governed by law.</span>
               </h1>
               <p className="text-blue-100 leading-relaxed mb-8
                 max-w-xl mx-auto lg:mx-0

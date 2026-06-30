@@ -542,7 +542,7 @@ export default function GiftCardsPage() {
               <h1 className="font-bold leading-tight mb-5
                 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px]">
                 The perfect gift,
-                <span className="text-yellow-300"> every time.</span>
+                <span className="text-black"> every time.</span>
               </h1>
               <p className="text-blue-100 leading-relaxed mb-8
                 max-w-xl mx-auto lg:mx-0
@@ -552,8 +552,8 @@ export default function GiftCardsPage() {
                 food, travel and more — all in one place.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <AppStoreButton />
-                <PlayStoreButton />
+                <AppStoreButton/>
+                <PlayStoreButton/>
               </div>
               {/* Quick trust points */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-2 mt-7">

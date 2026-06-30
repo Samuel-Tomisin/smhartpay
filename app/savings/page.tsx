@@ -102,7 +102,7 @@ const savingsPlans = [
   {
     name: "Target Save",
     badge: "Goal-Focused",
-    badgeColor: "bg-green-100 text-green-700",
+    badgeColor: "bg-gray-100 text-blue-700",
     highlight: false,
     description: "Lock funds towards a specific goal and earn higher interest on maturity.",
     rate: "12%",
@@ -118,7 +118,7 @@ const savingsPlans = [
   {
     name: "Fixed Save",
     badge: "Maximum Returns",
-    badgeColor: "bg-amber-100 text-amber-700",
+    badgeColor: "bg-gray-100 text-blue-700",
     highlight: false,
     description: "Lock a fixed amount for a fixed period and enjoy the highest returns.",
     rate: "15%",
@@ -160,21 +160,21 @@ const testimonials = [
       "I saved up for my daughter's school fees in 6 months using SmhartPay Target Save. The automated contributions made it effortless.",
     name: "Adaeze Obi",
     role: "Teacher, Enugu",
-    avatar: "https://i.pravatar.cc/150?img=47",
+    avatar: "https://randomuser.me/api/portraits/women/75.jpg",
   },
   {
     quote:
       "Fixed Save gave me the discipline I needed. I locked my money and didn't touch it — came out with 15% returns. Absolutely worth it.",
     name: "Emeka Nnaji",
     role: "Engineer, Abuja",
-    avatar: "https://i.pravatar.cc/150?img=12",
+    avatar: "https://randomuser.me/api/portraits/men/78.jpg",
   },
   {
     quote:
       "I love that I can have multiple savings goals at once. My emergency fund and travel fund are both growing side by side.",
     name: "Tolu Fashola",
     role: "Entrepreneur, Lagos",
-    avatar: "https://i.pravatar.cc/150?img=32",
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
   },
 ];
 
@@ -313,7 +313,7 @@ export default function SavingsPage() {
               </span>
               <h1 className="font-bold leading-tight mb-5
                 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px]">
-                Save Towards What <span className="text-yellow-300">Matters Most</span>
+                Save Towards What <span className="text-black">Matters Most</span>
               </h1>
               <p className="text-blue-100 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0
                 text-[15px] sm:text-[16px] md:text-[17px]">
@@ -325,8 +325,8 @@ export default function SavingsPage() {
                 <PlayStoreButton />
               </div>
               {/* Trust note */}
-              <p className="mt-6 text-[12px] text-blue-200">
-                🔒 NDIC insured · CBN regulated · Bank-grade encryption
+              <p className="mt-6 text-[12px] text-blue-200 flex items-center gap-4">
+               Deposit Insured By <img src="/images/ndic.svg" alt="" />Licensed by <img src="/images/cbn.svg" alt="" />
               </p>
             </div>
 
@@ -360,7 +360,7 @@ export default function SavingsPage() {
               bg-blue-50 px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
               How It Works
             </span>
-            <h2 className="font-bold text-gray-900
+            <h2 className="font-extrabold text-black
               text-[24px] sm:text-[28px] md:text-[34px]">
               Start saving in 3 simple steps
             </h2>
@@ -371,7 +371,7 @@ export default function SavingsPage() {
               <div key={i} className="relative bg-white rounded-2xl p-6 sm:p-7
                 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
                 {/* Step number */}
-                <span className="text-[42px] sm:text-[48px] font-black text-gray-100 leading-none block mb-4">
+                <span className="text-[42px] sm:text-[48px] font-black text-black leading-none block mb-4">
                   {step.number}
                 </span>
                 <h3 className="text-[16px] sm:text-[17px] font-bold text-gray-900 mb-3">
@@ -448,7 +448,7 @@ export default function SavingsPage() {
                 <div className={`rounded-xl p-4 mb-6 text-center
                   ${plan.highlight ? "bg-white/10" : "bg-gray-50 border border-gray-100"}`}>
                   <span className={`text-[36px] sm:text-[40px] font-black
-                    ${plan.highlight ? "text-yellow-300" : "text-[#034EA2]"}`}>
+                    ${plan.highlight ? "text-" : "text-[#034EA2]"}`}>
                     {plan.rate}
                   </span>
                   <span className={`text-[13px] ml-1
@@ -462,7 +462,7 @@ export default function SavingsPage() {
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5">
                       <span className={`mt-0.5 flex-shrink-0
-                        ${plan.highlight ? "text-yellow-300" : "text-[#034EA2]"}`}>
+                        ${plan.highlight ? "text-black" : "text-[#034EA2]"}`}>
                         <CheckIcon />
                       </span>
                       <span className={`text-[13px] sm:text-[14px] leading-snug
@@ -561,7 +561,7 @@ export default function SavingsPage() {
             {/* Mockup image */}
             <div className="flex-shrink-0">
               <img
-                src="./images/download.png"
+                src="/images/fivemillion.svg"
                 alt="SmhartPay savings feature screenshot"
                 className="w-[180px] sm:w-[220px] md:w-[260px] h-auto object-contain"
                 loading="lazy"

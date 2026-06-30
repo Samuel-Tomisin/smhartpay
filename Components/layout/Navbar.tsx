@@ -298,7 +298,7 @@ export default function Navbar() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:block ml-4 xl:ml-7">
-              <Button text="Download SmhartPay" />
+              <Button text="Download SmhartPay"/>
             </div>
           </div>
 
@@ -368,7 +368,7 @@ export default function Navbar() {
           </Link>
 
           <div className="py-4">
-            <Button text="Download SmhartPay" />
+            <Button text="Download SmhartPay"/>
           </div>
 
         </div>

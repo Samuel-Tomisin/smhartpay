@@ -365,7 +365,7 @@ const faqs = [
 
 function AppStoreButton({ dark = false }: { dark?: boolean }) {
   return (
-    <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer"
+    <a href="https://apps.apple.com/your-app-link" target="_blank" rel="noopener noreferrer"
       className={`inline-flex items-center gap-3 px-5 py-3 rounded-xl
         active:scale-95 transition-all duration-150
         ${dark
@@ -387,7 +387,7 @@ function AppStoreButton({ dark = false }: { dark?: boolean }) {
 
 function PlayStoreButton({ dark = false }: { dark?: boolean }) {
   return (
-    <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer"
+    <a href="https://play.google.com/store/your-app-link" target="_blank" rel="noopener noreferrer"
       className={`inline-flex items-center gap-3 px-5 py-3 rounded-xl
         active:scale-95 transition-all duration-150
         ${dark

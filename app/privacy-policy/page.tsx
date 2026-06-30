@@ -355,7 +355,7 @@ export default function PrivacyPolicy() {
   return (
     <div>
       <Navbar/>
-    <div className="bg-[url('/images/backg.svg')] bg-cover bg-center min-h-screen">
+    <div className="bg-[white] bg-cover bg-center min-h-screen">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 md:px-10 py-14 sm:py-16 md:py-20">
 
         {/* ── Page title ── */}

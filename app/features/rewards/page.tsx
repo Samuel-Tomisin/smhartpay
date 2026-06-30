@@ -457,7 +457,7 @@ export default function RewardsPage() {
                     <div className="flex items-start justify-between gap-2 flex-wrap">
                       <h3 className="text-[14px] font-bold text-gray-900">{title}</h3>
                       <span className="flex items-center gap-1 bg-amber-50 text-amber-700 text-[11px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap flex-shrink-0">
-                        <Star size={10} className="fill-amber-500" /> {points}
+                        <Star size={10} className="fill-white" /> {points}
                       </span>
                     </div>
                     <p className="text-[12px] text-[#64748B] mt-1 leading-relaxed">{description}</p>
@@ -577,38 +577,6 @@ export default function RewardsPage() {
                   </span>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════
-            LEADERBOARD TEASER
-        ════════════════════════════════════════ */}
-        <section className="px-4 sm:px-6 md:px-10 lg:px-20 py-12 md:py-16">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-[#1A202E] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-5">
-                <div className="w-14 h-14 rounded-2xl bg-amber-400/20 flex items-center justify-center flex-shrink-0">
-                  <Trophy size={26} className="text-amber-300" />
-                </div>
-                <div>
-                  <h3
-                    className="text-[18px] sm:text-[20px] font-bold text-white"
-                    style={{ fontFamily: "'Syne', sans-serif" }}
-                  >
-                    Monthly Leaderboard
-                  </h3>
-                  <p className="text-[13px] text-gray-400 mt-1">
-                    You're ranked <span className="text-amber-300 font-bold">#47</span> this month. Top earners win exclusive prizes every 30 days.
-                  </p>
-                </div>
-              </div>
-              <a
-                href="/leaderboard"
-                className="flex-shrink-0 bg-amber-400 hover:bg-amber-300 text-[#1A202E] font-bold px-6 py-3 rounded-xl text-[13px] flex items-center gap-2 transition-colors"
-              >
-                View Leaderboard <ArrowRight size={15} />
-              </a>
             </div>
           </div>
         </section>

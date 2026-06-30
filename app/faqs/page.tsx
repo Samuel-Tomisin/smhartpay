@@ -1,6 +1,7 @@
 "use client";
 
 import Footer from "@/Components/layout/footer";
+import Footer2 from "@/Components/layout/footer2";
 import Navbar from "@/Components/layout/Navbar";
 import { useState } from "react";
 
@@ -202,7 +203,7 @@ export default function FAQs() {
 
       </div>
     </section>
-    {/* <Footer/> */}
+    {/* <Footer2 /> */}
     </div>
   );
 }

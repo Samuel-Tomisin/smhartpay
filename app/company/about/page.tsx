@@ -7,10 +7,10 @@ export default function About() {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-col items-center px-4 sm:px-8 md:px-14 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-30">
+      <div className="flex flex-col items-center px-4 bg-white sm:px-8 md:px-14 lg:px-20 py-12 sm:py-16 md:py-20 lg:py-30">
 
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-[42px] lg:text-[50px] font-bold text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-[42px] lg:text-[50px] font-bold text-center text-black">
           About SmhartPay
         </h1>
 
