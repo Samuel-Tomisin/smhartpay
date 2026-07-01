@@ -179,7 +179,7 @@ export default function CardsPage() {
 <section className="px-6 md:px-20 py-16">
   <div className="flex flex-col max-w-6xl mx-auto md:flex-row justify-between items-center gap-10">
     <div className="max-w-md">
-      <h2 className="text-[31.5px] leading-snug text-[#40196D] font-semibold">
+      <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-[#40196D] font-semibold">
         Need to pay with cash? Use your Smhartpay card at ATMs nationwide.
       </h2>
       <p className="text-sm text-gray-600 py-4">
@@ -202,7 +202,7 @@ export default function CardsPage() {
       <img src="/images/blockcard.svg" alt="Block your Smhartpay card" className="w-full max-w-xs md:max-w-sm" />
     </div>
     <div className="max-w-md">
-      <h2 className="text-[31.5px] leading-snug text-[#40196D] font-extrabold">
+      <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-[#40196D] font-extrabold">
         Turn off access, turn on safety.
       </h2>
       <p className="text-sm text-gray-600 py-4 leading-relaxed">
