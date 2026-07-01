@@ -129,19 +129,19 @@ export default function CardsPage() {
           3. REQUEST CARD — two-column
       ══════════════════════════════════════════ */}
       <section className="px-5 py-14 sm:py-16 md:py-20">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-center sm:justify-center md:items-center lg:justify-between lg:
           items-center gap-10 md:gap-14 lg:gap-20">
 
           {/* Illustration */}
-          <div className="w-full md:w-1/2 flex justify-between">
-            <img
-              src="/images/ordercard.svg"
-              alt="Order SmhartPay card illustration"
-              className="w-[240px] sm:w-[300px] md:w-[360px] lg:w-[420px]
-                h-auto object-contain"
-              loading="lazy"
-            />
-          </div>
+<div className="w-full md:w-1/2 flex justify-center">
+  <img
+    src="/images/ordercard.svg"
+    alt="Order SmhartPay card illustration"
+    className="w-[240px] sm:w-[300px] md:w-[360px] lg:w-[420px]
+      h-auto object-contain"
+    loading="lazy"
+  />
+</div>
 
           {/* Text */}
           <div className="w-full md:w-1/2 text-center md:text-left">
