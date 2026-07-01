@@ -4,6 +4,7 @@ import Footer from "@/Components/layout/footer";
 import Navbar from "@/Components/layout/Navbar"
 import Button, { AppStoreButton } from "@/Components/ui/button";
 import { PlayStoreButton } from "@/Components/ui/PlayStoreButton";
+import { div } from "framer-motion/client";
 import { ChevronRight, HandCoins, Nfc, Send } from "lucide-react";
 
 const AppStoreIcon = () => (
@@ -81,7 +82,8 @@ export default function Rewards() {
     <div className="w-full lg:w-1/2 text-center lg:text-left">
       <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-black font-bold">Increase your streams of income.</h2>
       <p className="text-black font-[400] py-3">
-        Make money from cashbacks on every airtime and bill payment you make with your SmhartPay Business account.
+        Make money from cashbacks on every airtime and bill <br />
+         payment you make with your SmhartPay Business account.
       </p>
       <Button text={"Join SmhartPay Business"}/>
     </div>
@@ -149,11 +151,11 @@ export default function Rewards() {
 
 {/* Last illustration section */}
      
-           <div className="px-4 sm:px-10 lg:px-20 mb-20">
-             <div className="bg-blue-900 rounded-2xl flex flex-col lg:flex-row overflow-hidden">
-             <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-20 text-center lg:text-left">
+      <div className="px-4 sm:px-10 lg:px-20 mb-10">
+          <div className="bg-blue-900 rounded-2xl flex flex-col lg:flex-row overflow-hidden">
+            <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-20 text-center lg:text-left">
                <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-white font-bold">Move your business forward with softPOS</h2>
-               <p className="text-white py-5">Business can find you anywhere. softPOS from Kuda helps you receive payments on the move with any smartphone connected to the internet.</p>
+               <p className="text-white py-5">Business can find you anywhere. softPOS from SmhartPay helps you receive payments on the move with any smartphone connected to the internet.</p>
              <div className="flex flex-wrap items-center justify-center lg:justify-start text-black text-[12px] py-2 gap-4">
                <div className="flex items-center gap-2">
                  <p>Fully Licensed by the CBN</p>
@@ -163,7 +165,7 @@ export default function Rewards() {
                  <p>Deposits Insured by</p>
                  <img src="/images/ndic.svg" alt="ndic logo" className="h-5 w-auto"/>
                </div>
-               </div>
+              </div>
                <div className="flex flex-wrap justify-center lg:justify-start gap-3">
                  <a 
                    href="https://apps.apple.com"
@@ -184,7 +186,7 @@ export default function Rewards() {
                </div>
              </div>
              <div className="w-full lg:w-1/2 flex items-center justify-center px-6 sm:pb-0 pb-8 lg:pb-0 lg:px-0">
-               <img src="/images/eightthousand.svg" alt="" className="w-full max-w-xs sm:max-w-sm lg:max-w-md object-contain" />
+               <img src="/images/eightthousand.svg" alt="" className="w-full max-w-xs sm:max-w-sm lg:max-w-md object-contain hidden md:block" />
              </div>
              </div>
            </div>

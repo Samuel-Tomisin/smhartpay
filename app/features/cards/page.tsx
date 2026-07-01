@@ -137,8 +137,7 @@ export default function CardsPage() {
             <img
               src="/images/ordercard.svg"
               alt="Order SmhartPay card illustration"
-              className="w-[240px] sm:w-[300px] md:w-[360px] lg:w-[420px]
-                h-auto object-contain"
+              className="w-full max-w-xs md:max-w-sm"
               loading="lazy"
             />
           </div>

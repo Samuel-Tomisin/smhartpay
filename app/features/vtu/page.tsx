@@ -227,43 +227,40 @@ export default function VTUSection() {
 
       <div className="px-4 sm:px-10 lg:px-20 mb-20">
         <div className="bg-blue-900 rounded-2xl flex flex-col lg:flex-row overflow-hidden">
-        <div className="p-8 sm:p-12 lg:p-20">
-          <h2 className="text-2xl sm:text-[31.5px] text-white font-bold">Move your business <br />
-          forward with softPOS</h2>
-          <p className="text-white py-5">Business can find you anywhere. softPOS from Kuda helps <br />
-          you receive payments on the move with any smartphone <br />
-          connected to the internet.</p>
-        <div className="flex flex-wrap items-center text-black text-[12px] py-2 gap-4">
-          <div className="flex item-center gap-2">
-            <p>Fully Licensed by the CBN</p>
-            <img src="/images/cbn.svg" alt="cbn logo" />
-          </div>
-          <div className="flex item-center gap-2">
-            <p>Deposits Insured by</p>
-            <img src="/images/ndic.svg" alt="ndic logo" />
-          </div>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://apps.apple.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[14px] text-white underline flex items-center cursor-pointer hover:text-black"
-            >
-              <AppStoreIcon /> Download on App Store <ChevronRight />
-            </a>
-            <a
-              href="https://play.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[14px] text-white underline flex items-center cursor-pointer hover:text-black"
-            >
-              <PlayStoreIcon /> Download on Google Play <ChevronRight />
-            </a>
-          </div>
-        </div>
+        <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-20 text-center lg:text-left">
+                       <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-white font-bold">Move your business forward with softPOS</h2>
+                       <p className="text-white py-5">Business can find you anywhere. softPOS from SmhartPay helps you receive payments on the move with any smartphone connected to the internet.</p>
+                     <div className="flex flex-wrap items-center justify-center lg:justify-start text-black text-[12px] py-2 gap-4">
+                       <div className="flex items-center gap-2">
+                         <p>Fully Licensed by the CBN</p>
+                         <img src="/images/cbn.svg" alt="cbn logo" className="h-5 w-auto"/>
+                       </div>
+                       <div className="flex items-center gap-2">
+                         <p>Deposits Insured by</p>
+                         <img src="/images/ndic.svg" alt="ndic logo" className="h-5 w-auto"/>
+                       </div>
+                      </div>
+                       <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+                         <a 
+                           href="https://apps.apple.com"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="text-[14px] text-white underline flex items-center gap-1 cursor-pointer hover:text-black"
+                         >
+                           <AppStoreIcon /> Download on App Store <ChevronRight />
+                         </a>
+                         <a 
+                           href="https://play.google.com"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="text-[14px] text-white underline flex items-center gap-1 cursor-pointer hover:text-black"
+                         >
+                           <PlayStoreIcon /> Download on Google Play <ChevronRight />
+                         </a>
+                       </div>
+                     </div>
         <div className="flex justify-center lg:justify-end pt-0 lg:pt-20 pb-8 lg:pb-0 px-6 lg:px-0">
-          <img src="/images/eightthousand.svg" alt="" className="w-full max-w-xs sm:max-w-sm lg:max-w-md object-contain" />
+          <img src="/images/eightthousand.svg" alt="" className="w-full max-w-xs sm:max-w-sm lg:max-w-md object-contain hidden md:block" />
         </div>
         </div>
       </div>
