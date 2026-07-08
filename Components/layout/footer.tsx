@@ -29,20 +29,19 @@ export default function Footer() {
 
                 {/* Product Links */}
                 <div>
-                    <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7]">Product Links</h3>
+                    <h3 className="text-[16px] font-bold pb-4 text-[#44474e]">Product Links</h3>
                     <ul className="text-[14px] text-[#7C8FB7] space-y-1 flex flex-col">
                         <Link href="/transfer" className="cursor-pointer">Transfers</Link>
                         <Link href="/wallet" className="cursor-pointer">Wallet</Link>
                         <Link href="/savings" className="cursor-pointer">Savings</Link>
                         <Link href="/cards" className="cursor-pointer">Cards</Link>
                         <Link href="/rewards" className="cursor-pointer">Rewards</Link>
-                        <Link href="/pricing" className="cursor-pointer">Pricing</Link>
                     </ul>
                 </div>
 
                 {/* Company Links */}
                 <div>
-                    <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7]">Company Links</h3>
+                    <h3 className="text-[16px] font-bold pb-4 text-[#44474e]">Company Links</h3>
                     <ul className="text-[14px] text-[#7C8FB7] space-y-1 flex flex-col">
                         <Link href='/about' className="cursor-pointer">About</Link>
                         <Link href='/careers' className="cursor-pointer">Careers</Link>
@@ -52,9 +51,9 @@ export default function Footer() {
 
                 {/* Resources Links */}
                 <div>
-                    <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7]">Resources Links</h3>
+                    <h3 className="text-[16px] font-bold pb-4 text-[#44474e]">Resources Links</h3>
                     <ul className="text-[14px] text-[#7C8FB7] space-y-1 flex flex-col">
-                        <Link href="/help-centre" className="cursor-pointer">Help-Centre</Link>
+                        <Link href="/help-centre" className="cursor-pointer">Help</Link>
                         <Link href="/faqs" className="cursor-pointer">FAQs</Link>
                         <Link href="/blog" className="cursor-pointer">Blog</Link>
                         <Link href="/security" className="cursor-pointer">Security</Link>
@@ -63,12 +62,11 @@ export default function Footer() {
 
                 {/* Legal Links */}
                 <div>
-                    <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7] flex">Legal Links</h3>
+                    <h3 className="text-[16px] font-bold pb-4 text-[#44474e] flex">Legal Links</h3>
                     <ul className="text-[14px] text-[#7C8FB7] space-y-1 flex flex-col">
                         <Link href="/terms-of-use" className="cursor-pointer">Terms of Use</Link>
                         <Link href="/privacy-policy" className="cursor-pointer">Privacy Policy</Link>
                         <Link href="/cookie-policy" className="cursor-pointer">Cookie Policy</Link>
-                        <Link href="/legal" className="cursor-pointer">Legal</Link>
                     </ul>
                 </div>
             </div>
@@ -76,7 +74,7 @@ export default function Footer() {
             {/* Bottom section: socials + fund protection */}
             <div className="max-w-6xl mx-auto flex flex-col gap-8 md:flex-row md:justify-between pb-12 md:pb-20">
                 <div>
-                    <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7]">Social Links</h3>
+                    <h3 className="text-[16px] font-bold pb-4 text-[#44474e]">Social Links</h3>
                     <div className='flex grayscale gap-2.5'>
                         <Link href="https://twitter.com" target="_blank">
                             <img src="/images/twitter.svg" alt="twitter logo" className="size-7 cursor-pointer" />
@@ -94,7 +92,7 @@ export default function Footer() {
                 </div>
 
                 <div className="md:max-w-md">
-                    <h3 className="text-[16px] font-semibold pb-4 text-[#7C8FB7]">Fund Protection details</h3>
+                    <h3 className="text-[16px] font-bold pb-4 text-[#44474e]">Fund Protection details</h3>
                     <p className="text-[14px] text-[#7C8FB7]">
                         Your security comes first. SmhartPay uses encryption, secure
                         authentication, fraud monitoring, and compliance-driven processes

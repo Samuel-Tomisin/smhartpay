@@ -19,7 +19,7 @@ export default function Button({ text, onClick }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className="bg-[#034EA2] text-white text-[13px] font-semibold px-4 py-4 rounded-xl hover:bg-blue-700 transition cursor-pointer"
+      className="bg-[#034EA2] text-white text-[13px] font-semibold px-4 py-4 rounded-xl transition cursor-pointer"
     >
       {text}
     </button>

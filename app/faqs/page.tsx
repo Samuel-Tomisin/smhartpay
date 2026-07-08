@@ -203,7 +203,7 @@ export default function FAQs() {
 
       </div>
     </section>
-    {/* <Footer2 /> */}
+    {/* <Footer /> */}
     </div>
   );
 }

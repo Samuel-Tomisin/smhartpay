@@ -696,7 +696,7 @@ export default function CareersPage() {
         <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
       )}
     </>
-    <Footer2/>
+    <Footer/>
     </div>
   );
 }

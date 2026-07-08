@@ -884,7 +884,7 @@ export default function SecurityPage() {
 
       </div>
     </>
-    <Footer2 />
+    <Footer />
     </div>
   );
 }

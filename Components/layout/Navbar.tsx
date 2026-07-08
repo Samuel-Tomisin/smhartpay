@@ -17,6 +17,7 @@ const featuresItems = [
 
 const companyItems = [
   { label: "About",    href: "/company/about" },
+  { label: "Blog",     href: "/company/blog" },
   { label: "Careers",  href: "/company/careers" },
   { label: "Contact",  href: "/company/contact" },
 ];
@@ -101,6 +102,14 @@ const dropdownIcons: Record<string, React.ReactNode> = {
       </svg>
     </ItemIcon>
   ),
+  Blog: (
+    <ItemIcon bg="#EFF6FF">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
+      </svg>
+    </ItemIcon>
+  ),
+
   Careers: (
     <ItemIcon bg="#DBEAFE">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -115,6 +124,7 @@ const dropdownIcons: Record<string, React.ReactNode> = {
       </svg>
     </ItemIcon>
   ),
+
 };
 
 interface DropdownProps {
@@ -151,7 +161,7 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
       <div className="border-b border-gray-100 last:border-0">
         <button
           onClick={() => setOpen(!open)}
-          className="flex items-center justify-between w-full py-3 font-semibold text-[14px] text-blue-900 hover:text-blue-600 transition-colors"
+          className="flex items-center justify-between w-full py-3 font-semibold text-[14px] text-[#44474e] hover:text-blue-600 transition-colors"
         >
           {label}
           <ChevronIcon open={open} />
@@ -166,7 +176,7 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
               <Link
                 key={item.label}
                 href={item.href}
-                className="flex items-center gap-3 py-2 text-[13px] text-blue-900 hover:text-blue-600 transition-colors"
+                className="flex items-center gap-3 py-2 text-[13px] text-[#44474e] hover:text-blue-600 transition-colors"
               >
                 {dropdownIcons[item.label] ?? null}
                 {item.label}
@@ -181,7 +191,7 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
   /* ── Desktop hover dropdown ── */
   return (
     <div className="relative group">
-      <button className="flex items-center gap-1 cursor-pointer font-semibold text-[14px] text-blue-900 hover:text-blue-600 transition-colors">
+      <button className="flex items-center gap-1 cursor-pointer font-semibold text-[14px] text-[#44474e] hover:text-blue-600 transition-colors">
         {label}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +215,7 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
           <Link
             key={item.label}
             href={item.href}
-            className="flex items-center gap-3 px-4 py-2.5 text-[13px] text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+            className="flex items-center gap-3 px-4 py-2.5 text-[13px] text-[#44474e] hover:bg-blue-50 hover:text-blue-600 transition-colors"
           >
             {dropdownIcons[item.label] ?? null}
             {item.label}
@@ -287,13 +297,10 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* Desktop links — hidden below lg */}
             <div className="hidden lg:flex items-center gap-6 xl:gap-7 font-semibold text-[14px]">
-              <Link href="/" className="cursor-pointer hover:text-blue-600 hover:font-bold text-blue-900 transition-colors">Home</Link>
+              <Link href="/" className="cursor-pointer hover:text-blue-600 hover:font-bold text-[#44474e] transition-colors">Home</Link>
               <Dropdown label="Features" items={featuresItems} />
-              <Link href="/pricing" className="cursor-pointer hover:text-blue-600 hover:font-bold text-blue-900 transition-colors">Pricing</Link>
-              <Link href="/blog" className="cursor-pointer hover:text-blue-600 hover:font-bold text-blue-900 transition-colors">Blog</Link>
-              <Link href="/help-centre" className="cursor-pointer hover:text-blue-600 hover:font-bold text-blue-900 transition-colors">Help-Centre</Link>
+              <Link href="/help-centre" className="cursor-pointer hover:text-blue-600 hover:font-bold text-[#44474e] transition-colors">Help</Link>
               <Dropdown label="Company" items={companyItems} />
-              <Link href="/sign-in" className="cursor-pointer hover:text-blue-600 hover:font-bold text-blue-900 transition-colors">Sign In</Link>
             </div>
 
             {/* Desktop CTA */}
@@ -305,7 +312,7 @@ export default function Navbar() {
           {/* Hamburger button — visible below lg */}
           <button
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="lg:hidden p-2 rounded-lg text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-black hover:bg-blue-50 active:bg-blue-100 transition-colors"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -326,46 +333,46 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={() => setMobileOpen(false)}
-            className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
+            className="py-3 font-semibold text-[14px] text-[#44474e] border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
             Home
           </Link>
 
           <Dropdown label="Features" items={featuresItems} isMobile />
 
-          <Link
+          {/* <Link
             href="/pricing"
             onClick={() => setMobileOpen(false)}
-            className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
+            className="py-3 font-semibold text-[14px] text-black border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
             Pricing
-          </Link>
+          </Link> */}
 
-          <Link
+          {/* <Link
             href="/blog"
             onClick={() => setMobileOpen(false)}
-            className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
+            className="py-3 font-semibold text-[14px] text-[#44474e] border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
             Blog
-          </Link>
+          </Link> */}
 
           <Link
             href="/help-centre"
             onClick={() => setMobileOpen(false)}
-            className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
+            className="py-3 font-semibold text-[14px] text-[#44474e] border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
-            Help Centre
+            Help
           </Link>
 
           <Dropdown label="Company" items={companyItems} isMobile />
 
-          <Link
+          {/* <Link
             href="/sign-in"
             onClick={() => setMobileOpen(false)}
             className="py-3 font-semibold text-[14px] text-blue-900 border-b border-gray-100 hover:text-blue-600 transition-colors"
           >
             Sign In
-          </Link>
+          </Link> */}
 
           <div className="py-4">
             <Button text="Download SmhartPay"/>

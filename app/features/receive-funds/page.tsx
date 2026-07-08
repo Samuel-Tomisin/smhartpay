@@ -24,23 +24,25 @@ export default function ReceiveFund (){
     <div className="bg-white">
       <Navbar/>
       <div className="text-black flex flex-col items-center justify-center pt-12 sm:pt-18 px-4 sm:px-6 md:px-12 text-center bg-[#FAFAF9]">
-  <h1 className="text-[28px] sm:text-[36px] md:text-[48px] font-bold leading-tight max-w-3xl">
+        <div className="max-w-7xl mx-auto">
+  <h1 className="text-[28px] sm:text-[36px] md:text-[48px] font-bold leading-tight max-w-7xl">
     Get paid faster and manage incoming funds effortlessly.
   </h1>
-  <p className="text-[15px] sm:text-[16px] md:text-[18px] py-4 sm:py-6 max-w-xl text-gray-600">
+  <p className="text-[15px] sm:text-[16px] md:text-[18px] py-4 sm:py-6 max-w-7xl text-gray-600">
     Receive money instantly and keep track of every payment in one place with the SmhartPay Business app.
   </p>
-  <div className="pb-8 sm:pb-12 pt-3 sm:pt-5 w-full sm:w-auto">
+  <div className="flex justify-center pb-8 sm:pb-12 pt-3 sm:pt-5 w-full sm:w-auto">
     <JoinButton text={"Open a SmhartPay Business Account"} />
   </div>
   <div className="w-full max-w-4xl mx-auto">
     <img src="/images/sendmoney.svg" alt="Send money illustration" className="w-full h-auto" />
   </div>
+  </div>
 </div>
       
       
       {/* Feature Cards */}
-      <div className="flex flex-wrap items-stretch gap-5 px-6 sm:px-12 pt-10 lg:px-20 text-black font-bold pb-14">
+      <div className="max-w-7xl mx-auto flex flex-wrap items-stretch gap-5 px-6 sm:px-12 pt-10 lg:px-20 text-black font-bold pb-14">
         <div className="flex-1 min-w-[220px] bg-white rounded-2xl border border-gray-100 shadow-sm px-6 pt-7 pb-8 hover:shadow-md transition-shadow duration-200">
           <HandCoins />
           <p className="pt-6 pb-6">Receive funds from multiple customers seamlessly in one place.</p>
@@ -57,7 +59,7 @@ export default function ReceiveFund (){
       
       
       {/* Third Section */}
-      <div className="flex flex-col lg:flex-row items-center justify-between gap-10 px-6 sm:px-12 lg:px-20 py-15">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 px-6 sm:px-12 lg:px-20 py-15">
         <div className="max-w-lg">
           <h2 className="text-black font-bold text-2xl sm:text-[31.5px] leading-snug">
             Receive funds from customers across all major Nigerian banks and payment channels.
@@ -90,7 +92,7 @@ export default function ReceiveFund (){
       </div>
 
       {/* Fourth Section */}
-            <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 sm:px-12 lg:px-20 py-20">
+            <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 sm:px-12 lg:px-20 py-20">
               <div className="flex justify-center">
                 <img src="/images/internet.svg" alt="Internet" className="w-full max-w-xs sm:max-w-sm object-contain" />
               </div>

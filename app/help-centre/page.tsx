@@ -4,6 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import Footer from "@/Components/layout/footer";
 import Navbar from "@/Components/layout/Navbar";
+import {
+  Rocket,
+  ArrowLeftRight,
+  CreditCard,
+  PiggyBank,
+  Smartphone,
+  Gift,
+  ShieldCheck,
+  UserCircle,
+} from "lucide-react";
 
 // ─── Contact URLs — update when live ─────────────────────────────
 const SUPPORT_EMAIL   = "support@smhartpay.com";          // ← email
@@ -19,7 +29,8 @@ const PLAY_STORE_URL  = "https://play.google.com/store";   // ← Android
 const categories = [
   {
     id: "getting-started",
-    emoji: "🚀",
+    icon: Rocket,
+    iconColor: "text-blue-600",
     title: "Getting Started",
     description: "Create your account, verify identity, and take your first steps.",
     count: 8,
@@ -35,7 +46,8 @@ const categories = [
   },
   {
     id: "wallet-transfers",
-    emoji: "💸",
+    icon: ArrowLeftRight,
+    iconColor: "text-green-600",
     title: "Wallet & Transfers",
     description: "Fund your wallet, send and receive money with ease.",
     count: 10,
@@ -51,7 +63,8 @@ const categories = [
   },
   {
     id: "cards",
-    emoji: "💳",
+    icon: CreditCard,
+    iconColor: "text-purple-600",
     title: "Cards",
     description: "Create, manage, and use virtual and physical cards.",
     count: 9,
@@ -67,7 +80,8 @@ const categories = [
   },
   {
     id: "savings",
-    emoji: "🏦",
+    icon: PiggyBank,
+    iconColor: "text-amber-600",
     title: "Savings",
     description: "Set goals, automate contributions, and grow your money.",
     count: 7,
@@ -83,7 +97,8 @@ const categories = [
   },
   {
     id: "bills-vtu",
-    emoji: "📱",
+    icon: Smartphone,
+    iconColor: "text-teal-600",
     title: "Bills & VTU",
     description: "Buy airtime, data, pay electricity and cable TV bills.",
     count: 6,
@@ -99,7 +114,8 @@ const categories = [
   },
   {
     id: "rewards",
-    emoji: "🎁",
+    icon: Gift,
+    iconColor: "text-rose-600",
     title: "Rewards & Cashback",
     description: "Understand your rewards, cashback, and referral bonuses.",
     count: 5,
@@ -115,7 +131,8 @@ const categories = [
   },
   {
     id: "security",
-    emoji: "🔒",
+    icon: ShieldCheck,
+    iconColor: "text-gray-700",
     title: "Security & Privacy",
     description: "Protect your account and understand how your data is used.",
     count: 7,
@@ -131,7 +148,8 @@ const categories = [
   },
   {
     id: "account",
-    emoji: "👤",
+    icon: UserCircle,
+    iconColor: "text-indigo-600",
     title: "Account Management",
     description: "Update your profile, manage settings, and close your account.",
     count: 6,
@@ -149,7 +167,8 @@ const categories = [
   // ── ADD A NEW CATEGORY BELOW ──────────────────────────────────
   // {
   //   id: "your-category-id",
-  //   emoji: "🔧",
+  //   icon: SomeLucideIcon,
+  //   iconColor: "text-gray-600",
   //   title: "Category Title",
   //   description: "Short description of what this covers.",
   //   count: 5,
@@ -501,7 +520,9 @@ export default function HelpCentrePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {categories.map((cat) => (
+            {categories.map((cat) => {
+              const Icon = cat.icon;
+              return (
               <div key={cat.id}
                 className="bg-white rounded-2xl border border-gray-100
                   hover:shadow-md hover:border-gray-200 transition-all duration-200 overflow-hidden">
@@ -511,8 +532,8 @@ export default function HelpCentrePage() {
                   onClick={() => setOpenCategory(openCategory === cat.id ? null : cat.id)}
                   className="w-full text-left p-5 cursor-pointer">
                   <div className={`w-11 h-11 rounded-xl flex items-center justify-center
-                    text-xl mb-4 ${cat.iconBg}`}>
-                    {cat.emoji}
+                    mb-4 ${cat.iconBg}`}>
+                    <Icon className={`w-5 h-5 ${cat.iconColor}`} />
                   </div>
                   <div className="flex items-start justify-between gap-2">
                     <div>
@@ -557,7 +578,8 @@ export default function HelpCentrePage() {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

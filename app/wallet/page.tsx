@@ -6,28 +6,36 @@ import Button, { AppStoreButton, PlayStoreButton } from "@/Components/ui/button"
 
 export default function Wallet () {
   return (
-    <div>
+    <div className="bg-white">
       <Navbar/>
 
       {/* HERO */}
-      <div className="bg-[url('/images/bg.png')] bg-cover bg-center bg-no-repeat min-h-screen flex items-center">
-        <div className="flex flex-col px-6 py-16 sm:px-10 lg:px-20 lg:py-20">
-          <h1 className="text-[36px] sm:text-[52px] lg:text-[70px] text-white font-bold leading-tight max-w-3xl">
-            The wallet built for football fans
-          </h1>
-          <p className="text-[15px] sm:text-[18px] text-white max-w-xl">
-            Smhartpay digital wallet is built for the way you spend. Fund your favourite
-            platforms in seconds, send money globally and pay online. Sign Up below:
-          </p>
-          <div className="flex flex-wrap items-center gap-3 py-4">
-            <AppStoreButton/> <PlayStoreButton/>
-          </div>
-        </div>
-      </div>
+      <div className="relative bg-[url('/images/bg.png')] bg-cover bg-center bg-no-repeat min-h-screen flex items-center">
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60"></div>
+
+  {/* Content */}
+  <div className="relative z-10 flex flex-col px-6 py-16 sm:px-10 lg:px-20 lg:py-20">
+    <h1 className="text-[36px] sm:text-[52px] lg:text-[70px] text-white font-bold leading-tight max-w-3xl">
+      The wallet built for football fans
+    </h1>
+
+    <p className="text-[15px] sm:text-[18px] text-white max-w-xl">
+      Smhartpay digital wallet is built for the way you spend. Fund your favourite
+      platforms in seconds, send money globally and pay online. Sign Up below:
+    </p>
+
+    <div className="flex flex-wrap items-center gap-3 py-4">
+      <AppStoreButton />
+      <PlayStoreButton />
+    </div>
+  </div>
+</div>
 
       {/* FEATURE CARDS */}
       <div className="bg-white">
-        <div>
+        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-[28px] sm:text-[38px] lg:text-[50px] text-[#40196D] font-bold text-center px-6 py-10 lg:py-15">
             Your Complete Payment Solution
           </h2>
@@ -74,11 +82,12 @@ export default function Wallet () {
             <Button text={"Learn More"}/>
           </div>
         </div>
+        </div>
       </div>
 
       {/* RATE ALERTS */}
       <div className="px-6 py-10 sm:px-10 lg:px-20 bg-white">
-        <div className="flex flex-col lg:flex-row items-stretch bg-white overflow-hidden rounded-md">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-stretch bg-white overflow-hidden rounded-md">
           <div className="w-full lg:w-1/2">
             <img src="/images/handphone.webp" alt="" className="w-full h-full object-cover"/>
           </div>
@@ -104,7 +113,7 @@ export default function Wallet () {
 
       {/* SMOOTH EXPERIENCE */}
       <div className="bg-white py-10 px-6 sm:px-10 lg:py-15 lg:px-20">
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 py-10 lg:py-15">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 py-10 lg:py-15">
           {/* Left text column */}
           <div className="text-black max-w-xl text-center lg:text-left">
             <h2 className="text-[26px] sm:text-[32px] lg:text-[40px] font-semibold leading-tight">

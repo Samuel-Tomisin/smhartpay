@@ -682,7 +682,7 @@ export default function SavingsPage() {
       </section>
 
     </main>
-    <Footer2/>
+    <Footer/>
     </div>
   );
 }

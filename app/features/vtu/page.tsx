@@ -198,7 +198,7 @@ export default function VTUSection() {
         </div>
       </div>
 
-      {/* Seventh Section – More For You */}
+      {/* Seventh Section – More For You
       <div className="px-6 sm:px-12 lg:px-20 py-14">
         <h2 className="text-black font-bold text-2xl sm:text-[31.5px] mb-8 text-center">More For You</h2>
         <div className="flex flex-wrap justify-center gap-5">
@@ -221,11 +221,11 @@ export default function VTUSection() {
             <p className="text-black font-medium underline py-3 flex cursor-pointer">Learn more<ChevronRight/></p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       { /* Eight Section */ }
 
-      <div className="px-4 sm:px-10 lg:px-20 mb-20">
+      <div className="px-4 sm:px-10 lg:px-13 mb-20 mt-20">
         <div className="bg-blue-900 rounded-2xl flex flex-col lg:flex-row overflow-hidden">
         <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-20 text-center lg:text-left">
                        <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-white font-bold">Move your business forward with softPOS</h2>
@@ -259,7 +259,7 @@ export default function VTUSection() {
                          </a>
                        </div>
                      </div>
-        <div className="flex justify-center lg:justify-end pt-0 lg:pt-20 pb-8 lg:pb-0 px-6 lg:px-0">
+        <div className="flex justify-center lg:justify-end pt-0 lg:pt-20 lg:pb-0 px-6 lg:px-0">
           <img src="/images/eightthousand.svg" alt="" className="w-full max-w-xs sm:max-w-sm lg:max-w-md object-contain hidden md:block" />
         </div>
         </div>

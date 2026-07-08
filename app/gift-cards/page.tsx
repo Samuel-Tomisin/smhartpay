@@ -5,6 +5,32 @@ import Link from "next/link";
 import Footer from "@/Components/layout/footer";
 import Navbar from "@/Components/layout/Navbar";
 import Footer2 from "@/Components/layout/footer2";
+import {
+  ShoppingCart,
+  Apple,
+  Store,
+  Gamepad2,
+  Joystick,
+  Monitor,
+  PlayCircle,
+  Film,
+  Music,
+  Tv,
+  UtensilsCrossed,
+  Pizza,
+  Home,
+  Car,
+  Sparkles,
+  Footprints,
+  Smartphone,
+  Gift,
+  Zap,
+  Globe,
+  CreditCard,
+  Wallet,
+  Lock,
+  type LucideIcon,
+} from "lucide-react";
 
 // ─── Store URLs ───────────────────────────────────────────────────
 const APP_STORE_URL  = "https://apps.apple.com/your-app-link";
@@ -32,7 +58,7 @@ const giftCards = [
     tagline: "Shop millions of products worldwide",
     color: "from-orange-400 to-orange-600",
     textColor: "text-white",
-    logo: "🛒",
+    logo: ShoppingCart,
     denominations: ["$10", "$25", "$50", "$100", "$200"],
     currency: "USD",
     popular: true,
@@ -43,7 +69,7 @@ const giftCards = [
     tagline: "App Store, iTunes & Apple services",
     color: "from-gray-700 to-gray-900",
     textColor: "text-white",
-    logo: "🍎",
+    logo: Apple,
     denominations: ["$15", "$25", "$50", "$100"],
     currency: "USD",
     popular: true,
@@ -54,7 +80,7 @@ const giftCards = [
     tagline: "Nigeria's largest online marketplace",
     color: "from-orange-500 to-red-500",
     textColor: "text-white",
-    logo: "🏪",
+    logo: Store,
     denominations: ["₦2,000", "₦5,000", "₦10,000", "₦20,000"],
     currency: "NGN",
     popular: false,
@@ -66,7 +92,7 @@ const giftCards = [
     tagline: "PSN wallet top-up for games & DLCs",
     color: "from-blue-600 to-blue-800",
     textColor: "text-white",
-    logo: "🎮",
+    logo: Gamepad2,
     denominations: ["$10", "$20", "$50", "$100"],
     currency: "USD",
     popular: true,
@@ -77,7 +103,7 @@ const giftCards = [
     tagline: "Microsoft Store & Xbox Game Pass",
     color: "from-green-500 to-green-700",
     textColor: "text-white",
-    logo: "🕹️",
+    logo: Joystick,
     denominations: ["$10", "$25", "$50", "$100"],
     currency: "USD",
     popular: false,
@@ -88,7 +114,7 @@ const giftCards = [
     tagline: "PC gaming — thousands of titles",
     color: "from-slate-600 to-slate-800",
     textColor: "text-white",
-    logo: "🖥️",
+    logo: Monitor,
     denominations: ["$5", "$10", "$20", "$50", "$100"],
     currency: "USD",
     popular: false,
@@ -99,7 +125,7 @@ const giftCards = [
     tagline: "Apps, games & in-app purchases",
     color: "from-teal-400 to-teal-600",
     textColor: "text-white",
-    logo: "▶️",
+    logo: PlayCircle,
     denominations: ["$10", "$25", "$50"],
     currency: "USD",
     popular: false,
@@ -111,7 +137,7 @@ const giftCards = [
     tagline: "Stream movies, series & documentaries",
     color: "from-red-600 to-red-800",
     textColor: "text-white",
-    logo: "🎬",
+    logo: Film,
     denominations: ["$15", "$25", "$50", "$100"],
     currency: "USD",
     popular: true,
@@ -122,7 +148,7 @@ const giftCards = [
     tagline: "Music, podcasts & audiobooks",
     color: "from-green-400 to-green-600",
     textColor: "text-white",
-    logo: "🎵",
+    logo: Music,
     denominations: ["$10", "$30", "$60"],
     currency: "USD",
     popular: false,
@@ -133,7 +159,7 @@ const giftCards = [
     tagline: "Ad-free YouTube & YouTube Music",
     color: "from-red-500 to-red-700",
     textColor: "text-white",
-    logo: "📺",
+    logo: Tv,
     denominations: ["$10", "$30"],
     currency: "USD",
     popular: false,
@@ -145,7 +171,7 @@ const giftCards = [
     tagline: "Food delivery across Nigeria",
     color: "from-orange-400 to-amber-500",
     textColor: "text-white",
-    logo: "🍔",
+    logo: UtensilsCrossed,
     denominations: ["₦2,000", "₦5,000", "₦10,000"],
     currency: "NGN",
     popular: false,
@@ -156,7 +182,7 @@ const giftCards = [
     tagline: "Pizza delivery & dine-in vouchers",
     color: "from-blue-600 to-indigo-700",
     textColor: "text-white",
-    logo: "🍕",
+    logo: Pizza,
     denominations: ["₦3,000", "₦5,000", "₦10,000"],
     currency: "NGN",
     popular: false,
@@ -168,7 +194,7 @@ const giftCards = [
     tagline: "Unique stays & experiences worldwide",
     color: "from-rose-400 to-rose-600",
     textColor: "text-white",
-    logo: "🏠",
+    logo: Home,
     denominations: ["$25", "$50", "$100", "$250"],
     currency: "USD",
     popular: false,
@@ -179,7 +205,7 @@ const giftCards = [
     tagline: "Rides, Uber Eats & travel credits",
     color: "from-gray-800 to-black",
     textColor: "text-white",
-    logo: "🚗",
+    logo: Car,
     denominations: ["$10", "$25", "$50"],
     currency: "USD",
     popular: false,
@@ -191,7 +217,7 @@ const giftCards = [
     tagline: "Beauty, skincare & fragrance",
     color: "from-pink-500 to-rose-600",
     textColor: "text-white",
-    logo: "💄",
+    logo: Sparkles,
     denominations: ["$25", "$50", "$100"],
     currency: "USD",
     popular: false,
@@ -202,7 +228,7 @@ const giftCards = [
     tagline: "Sportswear, footwear & gear",
     color: "from-gray-900 to-black",
     textColor: "text-white",
-    logo: "👟",
+    logo: Footprints,
     denominations: ["$25", "$50", "$100", "$200"],
     currency: "USD",
     popular: false,
@@ -215,7 +241,7 @@ const giftCards = [
   //   tagline: "Short description of this brand",
   //   color: "from-blue-500 to-blue-700",
   //   textColor: "text-white",
-  //   logo: "🎁",
+  //   logo: Gift, // pick a lucide-react icon
   //   denominations: ["$10", "$25", "$50"],
   //   currency: "USD",
   //   popular: false,
@@ -225,21 +251,21 @@ const giftCards = [
 const steps = [
   {
     number: "01",
-    icon: "📱",
+    icon: Smartphone,
     title: "Open SmhartPay",
     description:
       "Log in to the SmhartPay app and navigate to the Gift Cards section from the home screen or the main menu.",
   },
   {
     number: "02",
-    icon: "🎁",
+    icon: Gift,
     title: "Choose Your Card",
     description:
       "Browse our catalogue, select the brand you want, pick your preferred denomination, and review the details.",
   },
   {
     number: "03",
-    icon: "⚡",
+    icon: Zap,
     title: "Pay & Receive Instantly",
     description:
       "Pay securely from your SmhartPay wallet. Your gift card code is delivered instantly to your email and in-app.",
@@ -248,37 +274,37 @@ const steps = [
 
 const features = [
   {
-    emoji: "⚡",
+    icon: Zap,
     title: "Instant Delivery",
     description:
       "Gift card codes are delivered instantly to your email and in-app notifications the moment payment is confirmed. No waiting.",
   },
   {
-    emoji: "🌍",
+    icon: Globe,
     title: "Global Brands",
     description:
       "Shop from a growing catalogue of 50+ international and local brands — from Amazon and Netflix to Jumia and Chowdeck.",
   },
   {
-    emoji: "💳",
+    icon: CreditCard,
     title: "Pay from Your Wallet",
     description:
       "Purchase any gift card directly from your SmhartPay wallet balance. No card details required — simple and secure.",
   },
   {
-    emoji: "🎁",
+    icon: Gift,
     title: "Send as a Gift",
     description:
       "Buy a gift card for someone else in seconds. Share the code via WhatsApp, email, or copy it directly from the app.",
   },
   {
-    emoji: "💰",
+    icon: Wallet,
     title: "Earn Cashback",
     description:
       "SmhartPay Plus and Business users earn cashback on every gift card purchase through our rewards programme.",
   },
   {
-    emoji: "🔒",
+    icon: Lock,
     title: "Safe & Secure",
     description:
       "Every transaction is encrypted and protected. Gift card codes are stored securely in your app until you use them.",
@@ -286,7 +312,7 @@ const features = [
 
   // ── ADD MORE FEATURES BELOW ───────────────────────────────────
   // {
-  //   emoji: "🌟",
+  //   icon: Sparkles, // pick a lucide-react icon
   //   title: "Feature Title",
   //   description: "Feature description here.",
   // },
@@ -394,7 +420,7 @@ function PlayStoreButton({ dark = false }: { dark?: boolean }) {
           ? "bg-gray-900 text-white hover:bg-black"
           : "bg-white text-gray-900 hover:bg-gray-50"}`}>
       <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24">
-        <path d="M3.18 23.76c.3.16.64.2.99.1l.1-.06 11.04-11.04-2.29-2.29L3.18 23.76z" fill="#EA4335"/>
+        <path d="M3.18 23.76c.3.16.64.2.99.1l.1-.06 11.04-11.04-2.29-2.29L3.18.24z" fill="#EA4335"/>
         <path d="M20.7 10.7l-2.6-1.48-2.59 2.59 2.59 2.59 2.62-1.5c.75-.43.75-1.77-.02-2.2z" fill="#FBBC04"/>
         <path d="M3.18.24C2.83.14 2.49.18 2.19.34L12.4 10.56l2.29-2.29L3.18.24z" fill="#4285F4"/>
         <path d="M2.19.34C1.7.62 1.38 1.18 1.38 1.98v20.04c0 .8.32 1.36.81 1.64l.1.06L13.61 12 2.19.34z" fill="#34A853"/>
@@ -444,6 +470,7 @@ function FAQItem({ q, a, isOpen, onToggle }: {
 
 // ── Gift card display card ────────────────────────────────────────
 function GiftCardTile({ card }: { card: typeof giftCards[0] }) {
+  const Logo = card.logo;
   return (
     <div className="group cursor-pointer">
       {/* Card face */}
@@ -468,7 +495,7 @@ function GiftCardTile({ card }: { card: typeof giftCards[0] }) {
 
         {/* Logo + name */}
         <div className="flex items-center gap-2 z-10">
-          <span className="text-2xl">{card.logo}</span>
+          <Logo className={`w-6 h-6 ${card.textColor}`} strokeWidth={2} />
           <span className={`text-[15px] font-bold ${card.textColor}`}>
             {card.name}
           </span>
@@ -542,7 +569,7 @@ export default function GiftCardsPage() {
               <h1 className="font-bold leading-tight mb-5
                 text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px]">
                 The perfect gift,
-                <span className="text-yellow-300"> every time.</span>
+                <span className="text-black"> every time.</span>
               </h1>
               <p className="text-blue-100 leading-relaxed mb-8
                 max-w-xl mx-auto lg:mx-0
@@ -641,14 +668,16 @@ export default function GiftCardsPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
-            {steps.map((step, i) => (
+            {steps.map((step, i) => {
+              const StepIcon = step.icon;
+              return (
               <div key={i}
                 className="relative bg-white rounded-2xl p-6 sm:p-7 border
                   border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <span className="text-[44px] font-black text-black leading-none block mb-2">
                   {step.number}
                 </span>
-                <span className="text-3xl block mb-4">{step.icon}</span>
+                <StepIcon className="w-8 h-8 text-[#034EA2] block mb-4" strokeWidth={2} />
                 <h3 className="text-[16px] sm:text-[17px] font-bold text-gray-900 mb-2">
                   {step.title}
                 </h3>
@@ -668,7 +697,8 @@ export default function GiftCardsPage() {
                   </div>
                 )}
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -750,11 +780,13 @@ export default function GiftCardsPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-            {features.map((feature) => (
+            {features.map((feature) => {
+              const FeatureIcon = feature.icon;
+              return (
               <div key={feature.title}
                 className="bg-white rounded-2xl border border-gray-100 p-6
                   hover:shadow-md hover:border-blue-100 transition-all duration-200 group">
-                <span className="text-3xl block mb-4">{feature.emoji}</span>
+                <FeatureIcon className="w-8 h-8 text-[#034EA2] block mb-4" strokeWidth={2} />
                 <h3 className="text-[15px] sm:text-[16px] font-bold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
@@ -762,7 +794,8 @@ export default function GiftCardsPage() {
                   {feature.description}
                 </p>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -880,7 +913,7 @@ export default function GiftCardsPage() {
       ══════════════════════════════════════════ */}
       <section className="px-5 py-16 sm:px-8 sm:py-20 md:px-10">
         <div className="max-w-6xl mx-auto text-center">
-          <span className="text-4xl block mb-5">🎁</span>
+          <Gift className="w-10 h-10 text-[#034EA2] mx-auto block mb-5" strokeWidth={2} />
           <h2 className="font-bold text-gray-900 mb-4
             text-[24px] sm:text-[30px] md:text-[36px]">
             Give the gift of choice
@@ -906,7 +939,7 @@ export default function GiftCardsPage() {
       </section>
 
     </main>
-    <Footer2/>
+    <Footer/>
     </div>
   );
 }

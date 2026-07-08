@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Footer from "@/Components/layout/footer";
 
 const countryCodes = [
   { code: "+234", country: "NG", flag: "🇳🇬", name: "Nigeria" },
@@ -218,6 +219,7 @@ export default function CreateAccount() {
 
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

@@ -73,17 +73,17 @@ export default function Transfer() {
 
       {/* HERO SECTION */}
       <section className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-6 sm:px-12 lg:px-20 pt-10 pb-14">
-        <div className="max-w-xl">
+        <div className="max-w-7xl mx-auto">
           <h1 className="text-[36px] sm:text-[42px] font-bold text-[#40196D] leading-tight">
             Send money for free, <br className="hidden sm:block" /> every day.
           </h1>
           <p className="py-4 text-black text-[14px] leading-relaxed">
             Your Kuda account comes with 25 free transfers to other banks every
-            month. That's up to 15,000 naira saved on transfers every year.
+            month. That's up to <br /> 15,000 naira saved on transfers every year.
           </p>
           <Button text="Join SmhartPay" />
         </div>
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 max-w-7xl mx-auto">
           <img
             src="/images/newspend.png"
             alt="SmhartPay app spending screen"
@@ -93,7 +93,7 @@ export default function Transfer() {
       </section>
 
       {/* FEATURE CARDS */}
-      <section className="flex flex-wrap items-stretch gap-5 px-6 sm:px-12 lg:px-20 pb-14">
+      <section className="flex flex-wrap items-stretch gap-5 px-6 sm:px-12 lg:px-20 pb-14 max-w-7xl mx-auto">
         {FEATURE_CARDS.map(({ icon, alt, text }) => (
           <div
             key={alt}
@@ -111,7 +111,7 @@ export default function Transfer() {
       {CONTENT_ROWS.map(({ image, imageAlt, title, body, cta, imageLeft }) => (
         <section
           key={title}
-          className="flex flex-col lg:flex-row items-center justify-between gap-10 px-6 sm:px-12 lg:px-20 py-14"
+          className="flex flex-col lg:flex-row items-center justify-between gap-10 px-6 sm:px-12 lg:px-20 py-14 max-w-7xl mx-auto"
         >
           {imageLeft && (
             <div className="flex-shrink-0">
