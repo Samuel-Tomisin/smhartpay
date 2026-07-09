@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Mobile2 () {
     return (
-        <div className="px-6 md:px-10 lg:px-20 pt-10 pb-10 md:pt-12 md:pb-12 lg:pt-15 lg:pb-15">
+        <div className="px-6 md:px-10 lg:px-20 py-10 md:py-12 lg:py-15">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
                 <div className="w-full md:w-1/2 text-center md:text-left">
                     <h1 className="text-[28px] text-black sm:text-[32px] md:text-[34px] lg:text-[36px] font-semibold leading-tight">
