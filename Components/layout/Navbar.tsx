@@ -161,7 +161,7 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
       <div className="border-b border-gray-100 last:border-0">
         <button
           onClick={() => setOpen(!open)}
-          className="flex items-center justify-between w-full py-3 font-semibold text-[14px] text-[#44474e] hover:text-blue-600 transition-colors"
+          className="flex items-center justify-between w-full py-3 font-semibold text-[14px] text-black hover:text-[#44474e] transition-colors"
         >
           {label}
           <ChevronIcon open={open} />
@@ -176,7 +176,7 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
               <Link
                 key={item.label}
                 href={item.href}
-                className="flex items-center gap-3 py-2 text-[13px] text-[#44474e] hover:text-blue-600 transition-colors"
+                className="flex items-center gap-3 py-2 text-[13px] text-black hover:text-[#44474e] transition-colors"
               >
                 {dropdownIcons[item.label] ?? null}
                 {item.label}
@@ -191,7 +191,7 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
   /* ── Desktop hover dropdown ── */
   return (
     <div className="relative group">
-      <button className="flex items-center gap-1 cursor-pointer font-semibold text-[14px] text-[#44474e] hover:text-blue-600 transition-colors">
+      <button className="flex items-center gap-1 cursor-pointer font-semibold text-[14px] text-black hover:text-[#44474e] transition-colors">
         {label}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +215,7 @@ function Dropdown({ label, items, isMobile = false }: DropdownProps) {
           <Link
             key={item.label}
             href={item.href}
-            className="flex items-center gap-3 px-4 py-2.5 text-[13px] text-[#44474e] hover:bg-blue-50 hover:text-blue-600 transition-colors"
+            className="flex items-center gap-3 px-4 py-2.5 text-[13px] text-black hover:bg-blue-50 hover:text-[#44474e] transition-colors"
           >
             {dropdownIcons[item.label] ?? null}
             {item.label}
@@ -297,9 +297,9 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* Desktop links — hidden below lg */}
             <div className="hidden lg:flex items-center gap-6 xl:gap-7 font-semibold text-[14px]">
-              <Link href="/" className="cursor-pointer hover:text-blue-600 hover:font-bold text-[#44474e] transition-colors">Home</Link>
+              <Link href="/" className="cursor-pointer hover:text-[#44474e] hover:font-bold text-black transition-colors">Home</Link>
               <Dropdown label="Features" items={featuresItems} />
-              <Link href="/help-centre" className="cursor-pointer hover:text-blue-600 hover:font-bold text-[#44474e] transition-colors">Help</Link>
+              <Link href="/help-centre" className="cursor-pointer hover:text-[#44474e] hover:font-bold text-black transition-colors">Help</Link>
               <Dropdown label="Company" items={companyItems} />
             </div>
 
@@ -333,7 +333,7 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={() => setMobileOpen(false)}
-            className="py-3 font-semibold text-[14px] text-[#44474e] border-b border-gray-100 hover:text-blue-600 transition-colors"
+            className="py-3 font-semibold text-[14px] text-black border-b border-gray-100 hover:text-[#44474e] transition-colors"
           >
             Home
           </Link>
@@ -359,7 +359,7 @@ export default function Navbar() {
           <Link
             href="/help-centre"
             onClick={() => setMobileOpen(false)}
-            className="py-3 font-semibold text-[14px] text-[#44474e] border-b border-gray-100 hover:text-blue-600 transition-colors"
+            className="py-3 font-semibold text-[14px] text-black border-b border-gray-100 hover:text-[#44474e] transition-colors"
           >
             Help
           </Link>
