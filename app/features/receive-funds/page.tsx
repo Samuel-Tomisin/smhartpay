@@ -44,15 +44,15 @@ export default function ReceiveFund (){
       {/* Feature Cards */}
       <div className="max-w-7xl mx-auto flex flex-wrap items-stretch gap-5 px-6 sm:px-12 pt-10 lg:px-20 text-black font-bold pb-14">
         <div className="flex-1 min-w-[220px] bg-white rounded-2xl border border-gray-100 shadow-sm px-6 pt-7 pb-8 hover:shadow-md transition-shadow duration-200">
-          <HandCoins />
+          <HandCoins className="text-brand-text"/>
           <p className="pt-6 pb-6">Receive funds from multiple customers seamlessly in one place.</p>
         </div>
         <div className="flex-1 min-w-[220px] bg-white rounded-2xl border border-gray-100 shadow-sm px-6 pt-7 pb-8 hover:shadow-md transition-shadow duration-200">
-          <BanknoteArrowUp />
+          <BanknoteArrowUp className="text-brand-text"/>
           <p className="pt-6 pb-6">Enjoy seamless incoming transfers from any Nigerian bank.</p>
         </div>
         <div className="flex-1 min-w-[220px] bg-white rounded-2xl border border-gray-100 shadow-sm px-6 pt-7 pb-8 hover:shadow-md transition-shadow duration-200">
-          <Bell />
+          <Bell className="text-brand-text"/>
           <p className="pt-6 pb-6">Get notifications when you receive funds.</p>
         </div>
       </div>

@@ -23,7 +23,7 @@ export default function CardsPage() {
       <h1 className="font-bold leading-tight text-[#1A202E]
         text-[28px] sm:text-[34px] md:text-[38px] lg:text-[44px]">
         Your Smart Card for a{" "}
-        <span className="text-[#034EA2]">Borderless Financial Experience</span>
+        <span className="text-brand-text">Borderless Financial Experience</span>
       </h1>
 
       <p className="text-[#64748B] leading-relaxed mt-4 mb-8
@@ -50,7 +50,7 @@ export default function CardsPage() {
         src="/images/card.webp"
         alt="SmhartPay Card"
         className="w-[260px] sm:w-[320px] md:w-[380px] lg:w-[440px]
-          h-auto object-contain drop-shadow-2xl"
+          h-auto object-contain drop-shadow-2xl bg-brand"
         loading="eager"
       />
     </div>
@@ -145,8 +145,8 @@ export default function CardsPage() {
           {/* Text */}
           <div className="w-full md:w-1/2 text-center md:text-left">
 
-            <h2 className="font-bold text-[#1A202E] leading-tight
-              text-[24px] text-[#40196D] sm:text-[28px] md:text-[30px] lg:text-[34px]">
+            <h2 className="font-bold text-brand-text leading-tight
+              text-[24px] sm:text-[28px] md:text-[30px] lg:text-[34px]">
               Request your card on the SmhartPay app
             </h2>
 
@@ -158,7 +158,7 @@ export default function CardsPage() {
 
             <a
               href="/features/cards"
-              className="inline-flex items-center justify-between gap-1.5 text-[#40196D]
+              className="inline-flex items-center justify-between gap-1.5 text-brand-text
                 font-semibold text-[14px] sm:text-[15px] hover:gap-3
                 transition-all duration-150 group underline"
             >
@@ -179,13 +179,13 @@ export default function CardsPage() {
 <section className="px-6 md:px-20 py-16">
   <div className="flex flex-col max-w-6xl mx-auto md:flex-row justify-between items-center gap-10">
     <div className="max-w-md">
-      <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-[#40196D] font-semibold">
+      <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-brand-text font-semibold">
         Need to pay with cash? Use your Smhartpay card at ATMs nationwide.
       </h2>
       <p className="text-sm text-gray-600 py-4">
         The Smhartpay card is accepted at ATMs across Nigeria.
       </p>
-      <p className="underline text-sm text-[#40196D] cursor-pointer font-semibold flex items-center gap-1 hover:opacity-75 transition-opacity">
+      <p className="underline text-sm text-brand-text cursor-pointer font-semibold flex items-center gap-1 hover:opacity-75 transition-opacity">
         Learn More About Cards <ChevronRight size={16} />
       </p>
     </div>
@@ -202,7 +202,7 @@ export default function CardsPage() {
       <img src="/images/blockcard.svg" alt="Block your Smhartpay card" className="w-full max-w-xs md:max-w-sm" />
     </div>
     <div className="max-w-md">
-      <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-[#40196D] font-extrabold">
+      <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-brand-text font-extrabold">
         Turn off access, turn on safety.
       </h2>
       <p className="text-sm text-gray-600 py-4 leading-relaxed">
@@ -210,7 +210,7 @@ export default function CardsPage() {
         you can block your missing card on the app so no one can use it.
         We'd like to see them try.
       </p>
-      <p className="text-sm text-[#40196D] font-semibold flex items-center gap-1 underline hover:opacity-75 transition-opacity cursor-pointer">
+      <p className="text-sm text-brand-text font-semibold flex items-center gap-1 underline hover:opacity-75 transition-opacity cursor-pointer">
         Learn How To Block Your Card <ChevronRight size={16} />
       </p>
     </div>
@@ -222,43 +222,43 @@ export default function CardsPage() {
 ══════════════════════════════════════════ */}
 <section className="px-6 md:px-20 py-16">
   <div className="text-center mb-10 max-w-6xl mx-auto">
-    <h2 className="text-[36px] text-[#40196D] font-bold">More For You</h2>
+    <h2 className="text-[36px] text-brand-text font-bold">More For You</h2>
   </div>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto lg:grid-cols-3 gap-6">
 
     {/* Card 1 — Transfer & Spend */}
     <div className="bg-white border border-gray-100 shadow-sm px-6 pt-7 pb-8 hover:shadow-md transition-shadow duration-200 flex flex-col">
-      <Send  className="size-8 text-[#40196D]" />
-      <h3 className="text-[#40196D] text-[22px] font-bold pt-8 pb-3">Transfer & Spend</h3>
+      <Send  className="size-8 text-brand-text" />
+      <h3 className="text-brand-text text-[22px] font-bold pt-8 pb-3">Transfer & Spend</h3>
       <p className="text-sm text-gray-600 leading-relaxed flex-1">
         Send money for free to any Nigerian account with 25 free transfers every month.
       </p>
-      <p className="text-sm underline text-[#40196D] pt-8 flex items-center gap-1 cursor-pointer hover:opacity-75 transition-opacity">
+      <p className="text-sm underline text-brand-text pt-8 flex items-center gap-1 cursor-pointer hover:opacity-75 transition-opacity">
         Learn More <ChevronRight size={14} />
       </p>
     </div>
 
     {/* Card 2 — Cardless Payment */}
     <div className="bg-white border border-gray-100 shadow-sm px-6 pt-7 pb-8 hover:shadow-md transition-shadow duration-200 flex flex-col">
-      <Nfc className="size-8 text-[#40196D]" />
-      <h3 className="text-[#40196D] text-[22px] font-bold pt-8 pb-3">Cardless Payment</h3>
+      <Nfc className="size-8 text-brand-text" />
+      <h3 className="text-brand-text text-[22px] font-bold pt-8 pb-3">Cardless Payment</h3>
       <p className="text-sm text-gray-600 leading-relaxed flex-1">
         Use Pay ID, Pay With USSD, or free transfers to make quick and safe payments without a debit card.
       </p>
-      <p className="text-sm underline text-[#40196D] pt-8 flex items-center gap-1 cursor-pointer hover:opacity-75 transition-opacity">
+      <p className="text-sm underline text-brand-text pt-8 flex items-center gap-1 cursor-pointer hover:opacity-75 transition-opacity">
         Learn More <ChevronRight size={14} />
       </p>
     </div>
 
     {/* Card 3 — Loans */}
     <div className="bg-white border border-gray-100 shadow-sm px-6 pt-7 pb-8 hover:shadow-md transition-shadow duration-200 flex flex-col">
-      <HandCoins className="size-8 text-[#40196D]" />
-      <h3 className="text-[#40196D] text-[22px] font-bold pt-8 pb-3">Loans</h3>
+      <HandCoins className="size-8 text-brand-text" />
+      <h3 className="text-brand-text text-[22px] font-bold pt-8 pb-3">Loans</h3>
       <p className="text-sm text-gray-600 leading-relaxed flex-1">
         Get instant loans up to ₦150,000 in the Smhartpay loan app easily in Nigeria without paperwork.
       </p>
-      <p className="text-sm underline text-[#40196D] pt-8 flex items-center gap-1 cursor-pointer hover:opacity-75 transition-opacity">
+      <p className="text-sm underline text-brand-text pt-8 flex items-center gap-1 cursor-pointer hover:opacity-75 transition-opacity">
         Learn More <ChevronRight size={14} />
       </p>
     </div>
@@ -273,7 +273,7 @@ export default function CardsPage() {
 
       {/* Text */}
       <div className="w-full md:w-1/2 text-center md:text-left">
-        <h2 className="font-bold text-[#40196D] leading-tight
+        <h2 className="font-bold text-brand-text leading-tight
           text-[26px] sm:text-[30px] md:text-[32px] lg:text-[36px]">
           The money app for <br />Africans.
         </h2>
@@ -282,8 +282,8 @@ export default function CardsPage() {
           Save, spend, send and invest money across borders.
         </p>
         <div className="flex justify-center md:justify-start">
-          <button className="bg-[#40196D] text-white text-[14px] font-semibold
-            px-6 py-3 rounded-xl hover:bg-purple-900 active:scale-95
+          <button className="bg-brand-text text-white text-[14px] font-semibold
+            px-6 py-3 rounded-xl hover:bg-brand-text/90 active:scale-95
             transition-all duration-150 cursor-pointer">
             Join SmhartPay
           </button>

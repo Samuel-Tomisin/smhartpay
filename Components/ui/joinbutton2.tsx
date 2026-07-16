@@ -21,7 +21,7 @@ export default function JoinButton({ text, onClick }: ButtonProps) {
   return (
     <button
       onClick={onClick}
-      className="bg-blue-900 text-white text-[13px] flex items-center gap-1.5 font-semibold px-4 py-4 rounded-xl hover:bg-blue-800 transition cursor-pointer"
+      className="bg-brand text-white text-[13px] flex items-center gap-1.5 font-semibold px-4 py-4 rounded-xl hover:bg-brand-dark transition cursor-pointer"
     >
       {text}<ChevronRight/>
     </button>

@@ -21,7 +21,7 @@ export default function Home () {
             <Hero/>
             <Features/>
             </div>
-            <div className="bg-[#034EA2]">
+            <div className="bg-brand-500">
             <Getstarted/>
             </div>
             <div className="bg-white">
@@ -30,7 +30,7 @@ export default function Home () {
             <div className="bg-white">
             <Mobile2/>
             </div>
-            <div className="bg-[#034EA2]">
+            <div className="bg-brand">
             <CTASection/>
             </div>
             <Testimonials/>

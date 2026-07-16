@@ -4,7 +4,7 @@ import Footer from "@/Components/layout/footer";
 import Navbar from "@/Components/layout/Navbar"
 import Button, { AppStoreButton } from "@/Components/ui/button";
 import { PlayStoreButton } from "@/Components/ui/PlayStoreButton";
-import { div } from "framer-motion/client";
+import { div } from "framer-motion/m";
 import { ChevronRight, HandCoins, Nfc, Send } from "lucide-react";
 
 const AppStoreIcon = () => (
@@ -29,7 +29,7 @@ export default function Rewards() {
     <div className="px-5 sm:px-8 lg:px-20 py-14 bg-white">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-black font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] leading-tight text-center">
-          Make money from <span className="text-blue-700">airtime and bill</span> payments on SmhartPay Business!
+          Make money from <span className="text-brand-text">airtime and bill</span> payments on SmhartPay Business!
         </h1>
         <p className="text-black flex items-center justify-center text-center py-3 text-sm sm:text-[14px] font-[600]">
           Whether you’re buying for yourself or selling, we’ll pay you 1.5% rewards on every airtime and bill payment you make.
@@ -51,7 +51,7 @@ export default function Rewards() {
 
     {/* Card 1 — Increase your streams of income. */}
     <div className="bg-white border border-gray-100 shadow-sm px-6 pt-5 pb-5 hover:shadow-md transition-shadow duration-200 flex flex-col">
-      <img src="/images/stream.svg" alt="" className="size-12" />
+      <img src="/images/stream.svg" alt="" className="size-12 text-brand-text" />
       <p className="text-sm text-black font-bold leading-relaxed flex-1 pt-4">
         Increase your streams of income.
       </p>
@@ -152,7 +152,7 @@ export default function Rewards() {
 {/* Last illustration section */}
      
       <div className="px-4 sm:px-10 lg:px-20 mb-10">
-          <div className="bg-blue-900 rounded-2xl flex flex-col lg:flex-row overflow-hidden">
+          <div className="bg-brand rounded-2xl flex flex-col lg:flex-row overflow-hidden">
             <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-20 text-center lg:text-left">
                <h2 className="text-2xl sm:text-3xl lg:text-[31.5px] text-white font-bold">Move your business forward with softPOS</h2>
                <p className="text-white py-5">Business can find you anywhere. softPOS from SmhartPay helps you receive payments on the move with any smartphone connected to the internet.</p>

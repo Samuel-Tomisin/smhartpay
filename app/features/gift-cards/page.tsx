@@ -555,7 +555,7 @@ export default function GiftCardsPage() {
       {/* ══════════════════════════════════════════
           1. HERO
       ══════════════════════════════════════════ */}
-      <section className="bg-gradient-to-br from-[#034EA2] via-[#0457b5] to-[#0369cc]
+      <section className="bg-brand
         text-white px-5 py-16 sm:px-8 sm:py-20 md:px-10 md:py-24">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -641,7 +641,7 @@ export default function GiftCardsPage() {
             ].map((stat) => (
               <div key={stat.label}
                 className="bg-gray-50 rounded-2xl py-4 px-3 border border-gray-100">
-                <p className="text-[20px] sm:text-[24px] font-black text-[#034EA2]">
+                <p className="text-[20px] sm:text-[24px] font-black text-brand-text">
                   {stat.value}
                 </p>
                 <p className="text-[12px] text-gray-500 mt-1">{stat.label}</p>
@@ -657,7 +657,7 @@ export default function GiftCardsPage() {
       <section className="px-5 py-16 sm:px-8 sm:py-20 md:px-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block text-[12px] font-semibold text-[#034EA2]
+            <span className="inline-block text-[12px] font-semibold text-brand-text
               bg-blue-50 px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
               How It Works
             </span>
@@ -709,7 +709,7 @@ export default function GiftCardsPage() {
       <section className="px-5 py-16 sm:px-8 sm:py-20 md:px-10 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            <span className="inline-block text-[12px] font-semibold text-[#034EA2]
+            <span className="inline-block text-[12px] font-semibold text-brand-text
               bg-blue-50 px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
               Catalogue
             </span>
@@ -733,7 +733,7 @@ export default function GiftCardsPage() {
                 className={`flex-shrink-0 px-4 py-2 rounded-full text-[13px]
                   font-semibold transition-all duration-150 whitespace-nowrap
                   ${activeCategory === cat.id
-                    ? "bg-[#034EA2] text-white"
+                    ? "bg-brand text-white"
                     : "bg-white border border-gray-200 text-gray-600 hover:bg-gray-100"}`}>
                 {cat.label}
               </button>
@@ -751,8 +751,8 @@ export default function GiftCardsPage() {
           {filtered.length > 8 && (
             <div className="text-center mt-10">
               <button onClick={() => setShowAll(!showAll)}
-                className="px-8 py-3 rounded-xl border border-[#034EA2] text-[#034EA2]
-                  text-[14px] font-semibold hover:bg-[#034EA2] hover:text-white
+                className="px-8 py-3 rounded-xl border border-[#034EA2] text-brand-text
+                  text-[14px] font-semibold hover:bg-brand hover:text-white
                   transition-all duration-150 active:scale-95">
                 {showAll
                   ? "Show less"
@@ -769,7 +769,7 @@ export default function GiftCardsPage() {
       <section className="px-5 py-16 sm:px-8 sm:py-20 md:px-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block text-[12px] font-semibold text-[#034EA2]
+            <span className="inline-block text-[12px] font-semibold text-brand-text
               bg-blue-50 px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
               Features
             </span>
@@ -786,7 +786,7 @@ export default function GiftCardsPage() {
               <div key={feature.title}
                 className="bg-white rounded-2xl border border-gray-100 p-6
                   hover:shadow-md hover:border-blue-100 transition-all duration-200 group">
-                <FeatureIcon className="w-8 h-8 text-[#034EA2] block mb-4" strokeWidth={2} />
+                <FeatureIcon className="w-8 h-8 text-brand-text block mb-4" strokeWidth={2} />
                 <h3 className="text-[15px] sm:text-[16px] font-bold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
@@ -805,7 +805,7 @@ export default function GiftCardsPage() {
       ══════════════════════════════════════════ */}
       <section className="px-5 py-10 sm:px-8 md:px-10 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-br from-[#034EA2] to-[#0369cc]
+          <div className="bg-brand
             rounded-3xl p-8 sm:p-10 md:p-12
             flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
@@ -833,7 +833,7 @@ export default function GiftCardsPage() {
       <section className="px-5 py-16 sm:px-8 sm:py-20 md:px-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block text-[12px] font-semibold text-[#034EA2]
+            <span className="inline-block text-[12px] font-semibold text-brand-text
               bg-blue-50 px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
               What users say
             </span>
@@ -882,7 +882,7 @@ export default function GiftCardsPage() {
       <section className="px-5 py-16 sm:px-8 sm:py-20 md:px-10 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-            <span className="inline-block text-[12px] font-semibold text-[#034EA2]
+            <span className="inline-block text-[12px] font-semibold text-brand-text
               bg-blue-50 px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
               FAQs
             </span>
@@ -901,7 +901,7 @@ export default function GiftCardsPage() {
           </div>
           <div className="text-center mt-8">
             <Link href="/help-centre"
-              className="text-[#034EA2] text-[14px] font-semibold hover:underline">
+              className="text-brand-text text-[14px] font-semibold hover:underline">
               Visit Help Centre for more answers →
             </Link>
           </div>
@@ -913,7 +913,7 @@ export default function GiftCardsPage() {
       ══════════════════════════════════════════ */}
       <section className="px-5 py-16 sm:px-8 sm:py-20 md:px-10">
         <div className="max-w-6xl mx-auto text-center">
-          <Gift className="w-10 h-10 text-[#034EA2] mx-auto block mb-5" strokeWidth={2} />
+          <Gift className="w-10 h-10 text-brand-text mx-auto block mb-5" strokeWidth={2} />
           <h2 className="font-bold text-gray-900 mb-4
             text-[24px] sm:text-[30px] md:text-[36px]">
             Give the gift of choice
@@ -930,7 +930,7 @@ export default function GiftCardsPage() {
           <p className="mt-6 text-[13px] text-gray-400">
             Questions?{" "}
             <Link href="/contact"
-              className="text-[#034EA2] font-medium hover:underline">
+              className="text-brand-text font-medium hover:underline">
               Contact our support team →
             </Link>
           </p>
